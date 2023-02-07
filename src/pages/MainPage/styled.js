@@ -5,11 +5,16 @@ export const Main = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 7rem;
+  margin-top: 3rem;
 
   section {
     width: 12rem;
     text-align: center;
+    span {
+      background-color: var(--dark-gray);
+      border: 0.4rem solid var(--dark-gray);
+      border-radius: 0.5rem;
+    }
     h1 {
       font-weight: 700;
       font-size: 1.35rem;
@@ -18,7 +23,7 @@ export const Main = styled.div`
     p {
       color: var(--gray);
       font-size: 1rem;
-      margin-bottom: 7rem;
+      margin-bottom: 3rem;
     }
   }
 `;
