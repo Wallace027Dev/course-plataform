@@ -6,6 +6,11 @@ export const Main = styled.div`
   justify-content: center;
   flex-direction: column;
   margin-top: 3rem;
+	p {
+      color: var(--gray);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
 
   section {
     width: 12rem;
@@ -21,9 +26,23 @@ export const Main = styled.div`
       margin-bottom: 1.1rem;
     }
     p {
-      color: var(--gray);
-      font-size: 1rem;
       margin-bottom: 3rem;
+    }
+  }
+  .fgt-pass {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    color: var(--dark-gray);
+  }
+  .lnk {
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    :hover {
+      color: var(--blue);
     }
   }
 `;

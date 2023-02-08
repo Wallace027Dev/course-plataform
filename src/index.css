@@ -1,14 +1,16 @@
 :root {
-	--blue: #3d5cff;
-	--gray: #858597;
-	--dark-gray: #1F1F39;
+  --blue: #3d5cff;
+  --gray: #858597;
+	--light-gray: #dcdce7;
+  --dark-gray: #1f1f39;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+	background-color: white;
+	font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

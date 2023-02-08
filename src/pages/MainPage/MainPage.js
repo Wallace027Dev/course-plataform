@@ -1,7 +1,8 @@
-import { Btn } from "../../components/Btn";
 import { Main } from "./styled";
+import { Btn } from "../../components/Btn";
 import MainPageLight from "../../images/MainPage-Light.svg";
 import LogoStaart from "../../images/LogoStaart.svg";
+import { Link } from "react-router-dom";
 
 export default function MainPage() {
   return (
@@ -9,8 +10,9 @@ export default function MainPage() {
       <img src={MainPageLight} alt="Main Page Photo" />
       <section>
         <h1>
-          Dê <span>{<img src={LogoStaart} alt="" />}</span> na sua carreira em
-          tecnologia
+          Dê o <span>{<img src={LogoStaart} alt="Logo Staart" />}</span> na{" "}
+          <br />
+          sua carreira em <br /> tecnologia
         </h1>
         <p>
           Nós capacitamos pessoas a construirem soluções através de tecnologia.
@@ -19,8 +21,20 @@ export default function MainPage() {
         </p>
       </section>
       <div>
-        <Btn>inscrever</Btn>
-        <Btn>Logar</Btn>
+        <Link to="/sign-up">
+          <Btn className="lnk">Inscrever</Btn>
+        </Link>
+
+        <Link to="/">
+          <Btn className="lnk">Logar</Btn>
+        </Link>
+      </div>
+      <div className="fgt-pass">
+        <p>Esqueceu a senha?</p>
+
+        <Link to="/">
+          <Btn className="lnk">Resetar senha</Btn>
+        </Link>
       </div>
     </Main>
   );
