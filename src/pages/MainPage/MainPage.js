@@ -1,5 +1,5 @@
 import { Main } from "./styled";
-import { Btn } from "../../components/Btn";
+import { Btn } from "../../styles/Btn";
 import MainPageLight from "../../images/MainPage-Light.svg";
 import LogoStaart from "../../images/LogoStaart.svg";
 import { Link } from "react-router-dom";
@@ -25,7 +25,7 @@ export default function MainPage() {
           <Btn className="lnk">Inscrever</Btn>
         </Link>
 
-        <Link to="/">
+        <Link to="/log-in">
           <Btn className="lnk">Logar</Btn>
         </Link>
       </div>

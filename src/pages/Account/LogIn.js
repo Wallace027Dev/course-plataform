@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Btn } from "../../components/Btn";
+import { Btn } from "../../styles/Btn";
 import { Account } from "./styled";
 
 export default function LogIn() {
@@ -15,7 +15,9 @@ export default function LogIn() {
           <input type="mail" />
           <p>Password</p>
           <input type="password" />
-          <Btn className="btn">Logar</Btn>
+          <Link to="/verified">
+            <Btn className="btn">Logar</Btn>
+          </Link>
         </label>
         <div>
           <p>

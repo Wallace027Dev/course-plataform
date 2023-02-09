@@ -1,4 +1,4 @@
-import { Btn } from "../../components/Btn";
+import { Btn } from "../../styles/Btn";
 import { Link } from "react-router-dom";
 import { Account } from "./styled";
 
