@@ -9,7 +9,7 @@ export default function Carousel() {
     fetch("https://frontend-project.staart.com/resource/?resourceName=journeys")
       .then((response) => response.json())
       .then(setData)
-      .catch(function(error) {
+      .catch((error) {
   	console.log('There has been a problem with your fetch operation: ' + error.message);
   }, []);
 
