@@ -8,7 +8,9 @@ export default function Carousel() {
   useEffect(() => {
     fetch("https://frontend-project.staart.com/resource/?resourceName=journeys")
       .then((response) => response.json())
-      .then(setData);
+      .then(setData)
+      .catch(function(error) {
+  	console.log('There has been a problem with your fetch operation: ' + error.message);
   }, []);
 
 	const handleRight = (e) =>{
