@@ -11,9 +11,6 @@ export default function Home() {
         <input type="text" placeholder="Pesquise a jornada ou aula" />
         <div className="center">
           {/* Aqui vai um preview dos professores */}
-          <img className="prof-img" src={vitor} alt="Professor preview" />
-          <img className="prof-img" src={vitor} alt="Professor preview" />
-          <img className="prof-img" src={vitor} alt="Professor preview" />
         </div>
         <h2>Escolha sua Jornada</h2>
         <section className="center">
