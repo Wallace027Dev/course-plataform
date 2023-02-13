@@ -31,7 +31,7 @@ export const HomeMain = styled.div`
     padding-left: 1rem;
     margin: 1.2rem 0;
     ::placeholder {
-      color: var(--gray);
+      color: var(--light-gray);
     }
   }
   .prof-img {
