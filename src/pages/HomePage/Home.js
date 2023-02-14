@@ -1,5 +1,6 @@
 import { HomeMain } from "./styled";
 import vitor from "../../images/profs/vitor.jpg";
+import Carousel from "../../components/carousel/Carousel";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
         <p>O que você vai estudar hoje?</p>
         <input type="text" placeholder="Pesquise a jornada ou aula" />
         <div className="center">
-          {/* Aqui vai um preview dos professores */}
+          <Carousel />
         </div>
         <h2>Escolha sua Jornada</h2>
         <section className="center">

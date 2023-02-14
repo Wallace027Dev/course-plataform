@@ -40,7 +40,6 @@ export const Carousels = styled.div`
       }
       .price {
         font-size: 0.8rem;
-        text-decoration: line-through;
         flex-grow: 1;
       }
     }
