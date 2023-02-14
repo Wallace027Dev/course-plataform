@@ -4,7 +4,7 @@ import MainPage from "./pages/MainPage/MainPage";
 import SignUp from "./pages/Account/SignUp";
 import Verified from "./pages/VerifiedPage/Verified";
 import Home from "./pages/HomePage/Home";
-import Carousel from "./components/carousel/Carousel";
+import Carousel from "./components/CarouselJourneys/CarouselJourneys";
 
 export default function AppRoutes() {
   return (
