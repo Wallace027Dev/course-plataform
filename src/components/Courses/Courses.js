@@ -1,40 +1,40 @@
 import { useEffect, useState, useRef } from "react";
 
-export default function Courses() {
-  const [courses, setCourses] = useState([]);
-  const coursesRef = useRef(null);
+export default function CarouselJourneys() {
+  const [data, setData] = useState([]);
+  const carousel = useRef(null);
 
   useEffect(() => {
-    fetch("https://frontend-project.staart.com/journeys")
+    fetch(
+      "https://frontend-project.staart.com/courses/23856860-f5b9-4b71-a92f-546902b8348c/lessons/d4d72976-965d-4670-87f4-4bbf56ba7725"
+    )
       .then(async (response) => {
         const body = await response.json();
-        setCourses(body);
-        setCourses(console.log);
+        setData(body);
       })
+
       .catch((error) => {
         console.log(error.message);
       });
   }, []);
 
-  if (!courses || !courses.length) return null;
+  if (!data || !data.length) return null;
 
   return (
-    <div ref={coursesRef}>
-      {courses.map((item) => {
-        const { coursesID, medias, title, description } = item;
+    <div>
+      <div className="car" ref={carousel}>
+        {data.map((item) => {
+          const { modules, thumb } = item;
 
-        return (
-          <div key={coursesID}>
-            <div>
-              <img src={medias.thumb} alt="foto" />
+          return (
+            <div className="item" key={modules.lessonsID}>
+              <div className="image">
+                <img src={thumb} alt="foto" />
+              </div>
             </div>
-            <div>
-              <span>{title}</span>
-              <span>{description}</span>
-            </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 }

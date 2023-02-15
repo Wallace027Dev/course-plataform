@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Carousels = styled.div`
   .car {
-    max-width: 57.5vw;
+    max-width: 288px;
     display: flex;
     flex-direction: row;
     overflow-x: auto;
@@ -22,7 +22,7 @@ export const Carousels = styled.div`
     flex-direction: column;
     flex: none;
     .image img {
-      width: 10rem;
+      width: 8rem;
       object-fit: cover;
       margin: 0.5rem 0;
     }
@@ -39,11 +39,11 @@ export const Carousels = styled.div`
         border-radius: 10px;
       }
       .title {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: bold;
       }
       .group {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
       }
     }
   }
@@ -57,13 +57,13 @@ export const Carousels = styled.div`
       border: none;
       cursor: pointer;
 
-			img {
-				height: 1rem;
-				width: 1rem;
-				padding: 0.5rem;
-				border-radius: 1rem;
-				background-color: var(--light-gray);
-			}
+      img {
+        height: 1rem;
+        width: 1rem;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        background-color: var(--light-gray);
+      }
 
       :first-child img {
         transform: rotate(180deg);

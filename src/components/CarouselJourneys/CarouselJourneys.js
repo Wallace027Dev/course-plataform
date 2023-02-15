@@ -1,9 +1,11 @@
 import { useEffect, useState, useRef } from "react";
 import { Carousels } from "./styled";
 import seta from "../../images/seta.svg";
+import errorVideos from "../../images/errorVideos.svg";
 
 export default function CarouselJourneys() {
   const [data, setData] = useState([]);
+  const [hasError, setHasError] = useState(false);
   const carousel = useRef(null);
 
   useEffect(() => {
@@ -11,10 +13,14 @@ export default function CarouselJourneys() {
       .then(async (response) => {
         const body = await response.json();
         setData(body);
+				if (!response.ok){
+					hasError(true)
+					return
+				}
       })
 
-      .catch((error) => {
-        console.log(error.message);
+      .catch(() => {
+        setHasError(true);
       });
   }, []);
 
@@ -28,35 +34,47 @@ export default function CarouselJourneys() {
     carousel.current.scrollLeft += carousel.current.offsetWidth;
   };
 
-  if (!data || !data.length) return null;
-
-  return (
-    <Carousels>
-      <div className="car" ref={carousel}>
-        {data.map((item) => {
-          const { coursesID, medias, title, description } = item;
-
-          return (
-            <div className="item" key={coursesID}>
-              <div className="image">
-                <img src={medias.thumb} alt="foto" />
-              </div>
-              <div className="info">
-                <span className="title">{title}</span>
-                <span className="group">{description}</span>
-              </div>
-            </div>
-          );
-        })}
+  if (hasError) {
+    return (
+      <div>
+        <img src={errorVideos} alt="Imagem de erro" />
+        <h2 style={{ marginBottom: "16px" }}>Sem jornada!</h2>
+        <p>
+          Não foi encontrada nenhuma
+          <br />
+          jornada do momento
+        </p>
       </div>
-      <div className="btns">
-        <button onClick={handleLeftClick}>
-          <img src={seta} alt="Seta para esquerda" />
-        </button>
-        <button onClick={handleRightClick}>
-          <img src={seta} alt="Seta para direita" />
-        </button>
-      </div>
-    </Carousels>
-  );
+    );
+  } else {
+    return (
+      <Carousels>
+        <div className="car" ref={carousel}>
+          {data.map((item) => {
+            const { coursesID, medias, title, description } = item;
+
+            return (
+              <div className="item" key={coursesID}>
+                <div className="image">
+                  <img src={medias.thumb} alt="foto" />
+                </div>
+                <div className="info">
+                  <span className="title">{title}</span>
+                  <span className="group">{description}</span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="btns">
+          <button onClick={handleLeftClick}>
+            <img src={seta} alt="Seta para esquerda" />
+          </button>
+          <button onClick={handleRightClick}>
+            <img src={seta} alt="Seta para direita" />
+          </button>
+        </div>
+      </Carousels>
+    );
+  }
 }

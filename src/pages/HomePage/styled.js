@@ -40,7 +40,10 @@ export const HomeMain = styled.div`
   }
   main {
     flex-direction: column;
-    div {
+		h2 {
+			margin-top: 2rem;
+		}
+    > div {
       margin-bottom: 3rem;
       img {
         margin-right: 0.5rem;

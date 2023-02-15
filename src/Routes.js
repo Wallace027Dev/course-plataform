@@ -9,11 +9,11 @@ import Carousel from "./components/CarouselJourneys/CarouselJourneys";
 export default function AppRoutes() {
   return (
     <Routes>
-      <Route path="/main" element={<MainPage />} />
+      <Route path="/" element={<MainPage />} />
       <Route path="/sign-up" element={<SignUp />} />
       <Route path="/log-in" element={<LogIn />} />
       <Route path="/verified" element={<Verified />} />
-      <Route path="/" element={<Home />} />
+      <Route path="/home" element={<Home />} />
       <Route path="/carousel" element={<Carousel />} />
     </Routes>
   );
