@@ -34,7 +34,7 @@ export default function CarouselJourneys() {
     <Carousels>
       <div className="car" ref={carousel}>
         {data.map((item) => {
-          const { coursesID, medias, title, group } = item;
+          const { coursesID, medias, title, description } = item;
 
           return (
             <div className="item" key={coursesID}>
@@ -43,7 +43,7 @@ export default function CarouselJourneys() {
               </div>
               <div className="info">
                 <span className="title">{title}</span>
-                <span className="group">{group}</span>
+                <span className="group">{description}</span>
               </div>
             </div>
           );

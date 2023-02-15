@@ -1,6 +1,6 @@
 import { HomeMain } from "./styled";
-import vitor from "../../images/profs/vitor.jpg";
 import CarouselJourneys from "../../components/CarouselJourneys/CarouselJourneys";
+import Courses from "../../components/Courses/Courses.js";
 
 export default function Home() {
   return (
@@ -11,28 +11,13 @@ export default function Home() {
         <p>O que você vai estudar hoje?</p>
         <input type="text" placeholder="Pesquise a jornada ou aula" />
         <div className="center">
+          {/* Aqui vai as jornadas */}
           <CarouselJourneys />
         </div>
-        <h2>Escolha sua Jornada</h2>
-        <section className="center">
-          {/* Aqui vai as jornadas */}
-          <div>
-            <img className="journey-img" src={vitor} alt="Professor preview" />
-            <h3>Jornada de React</h3>
-          </div>
-          <div>
-            <img className="journey-img" src={vitor} alt="Professor preview" />
-            <h3>Jornada de React</h3>
-          </div>
-          <div>
-            <img className="journey-img" src={vitor} alt="Professor preview" />
-            <h3>Jornada de React</h3>
-          </div>
-          <div>
-            <img className="journey-img" src={vitor} alt="Professor preview" />
-            <h3>Jornada de React</h3>
-          </div>
-        </section>
+        <div>
+          <h2>Escolha sua Jornada</h2>
+          <Courses />
+        </div>
       </main>
     </HomeMain>
   );

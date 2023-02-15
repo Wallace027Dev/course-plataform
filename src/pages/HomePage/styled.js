@@ -47,18 +47,4 @@ export const HomeMain = styled.div`
       }
     }
   }
-  section {
-    gap: 0.9rem;
-    width: 20.625rem;
-    div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .journey-img {
-      width: 10rem;
-      border-radius: 1rem;
-      margin-top: 1.25rem;
-    }
-  }
 `;

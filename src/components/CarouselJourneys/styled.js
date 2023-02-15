@@ -24,7 +24,7 @@ export const Carousels = styled.div`
     .image img {
       width: 10rem;
       object-fit: cover;
-      margin: 1rem 0;
+      margin: 0.5rem 0;
     }
     .info {
       display: flex;
@@ -35,7 +35,7 @@ export const Carousels = styled.div`
         display: block;
         text-align: center;
         color: var(--dark-gray);
-        padding: 5px;
+        padding: 0.1rem;
         border-radius: 10px;
       }
       .title {
@@ -43,7 +43,7 @@ export const Carousels = styled.div`
         font-weight: bold;
       }
       .group {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
       }
     }
   }
