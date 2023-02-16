@@ -10,15 +10,15 @@ export default function LogIn() {
       </div>
       {/* CONTAINER */}
       <section>
-        <label>
-          <p>Seu email</p>
+        <form>
+          <label>Seu email</label>
           <input type="mail" />
-          <p>Password</p>
+          <label>Password</label>
           <input type="password" />
           <Link to="/verified">
             <Btn className="btn">Logar</Btn>
           </Link>
-        </label>
+        </form>
         <div>
           <p>
             Não tem uma conta?{" "}
