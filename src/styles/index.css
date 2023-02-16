@@ -33,6 +33,7 @@ body {
 @media (max-width: 425px) {
   body {
     max-width: 315px;
-		margin: 2rem auto;
+    margin: 2rem auto;
   }
+
 }

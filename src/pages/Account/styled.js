@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Account = styled.div`
   div {
-    margin-left: 1.5rem;
     h1 {
       font-weight: 700;
       font-size: 2rem;
@@ -17,7 +16,7 @@ export const Account = styled.div`
     width: 20rem;
     form {
       input {
-        width: 20rem;
+        width: 18rem;
         height: 3rem;
         border: 1px solid var(--gray);
         border-radius: 1rem;
