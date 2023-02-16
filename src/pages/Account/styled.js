@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Account = styled.div`
-  margin-top: 5.35rem;
   div {
     margin-left: 1.5rem;
     h1 {
@@ -16,22 +15,25 @@ export const Account = styled.div`
   section {
     margin: 2.5rem auto;
     width: 20rem;
-    label {
+    form {
       input {
         width: 20rem;
         height: 3rem;
         border: 1px solid var(--gray);
         border-radius: 1rem;
         margin-bottom: 1.5rem;
+        padding-left: 1.5rem;
       }
       .btn {
         width: 20rem;
-				font-weight: 500;
+        font-weight: 500;
         font-size: 1rem;
       }
-      p {
+      label {
         font-size: 0.8rem;
         color: var(--gray);
+        display: flex;
+        justify-content: flex-start;
       }
     }
     p {

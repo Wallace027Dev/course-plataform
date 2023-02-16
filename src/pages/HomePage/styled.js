@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const HomeMain = styled.div`
-  margin: 2rem auto;
   max-width: 20.625rem;
   h1,
   h2 {
