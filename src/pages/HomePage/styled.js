@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HomeMain = styled.div`
-  max-width: 20.625rem;
+  width: 20.625rem;
   h1,
   h2 {
     color: var(--dark-gray);
@@ -38,7 +38,6 @@ export const HomeMain = styled.div`
     border-radius: 1rem;
   }
   main {
-    flex-direction: column;
 		h2 {
 			margin-top: 2rem;
 		}

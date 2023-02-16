@@ -21,7 +21,11 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  margin: 2rem auto;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	flex-direction: column;
 }
 
 .center {
@@ -33,7 +37,6 @@ body {
 @media (max-width: 425px) {
   body {
     max-width: 315px;
-    margin: 2rem auto;
   }
 
 }

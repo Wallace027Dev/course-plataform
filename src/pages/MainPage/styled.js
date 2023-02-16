@@ -1,19 +1,14 @@
 import styled from "styled-components";
 
 export const Main = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: 3rem;
-	p {
-      color: var(--gray);
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
+  p {
+    color: var(--gray);
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
 
   section {
-    width: 12rem;
+    width: 14rem;
     text-align: center;
     span {
       background-color: var(--dark-gray);
@@ -26,7 +21,7 @@ export const Main = styled.div`
       margin-bottom: 1.1rem;
     }
     p {
-      margin-bottom: 3rem;
+      margin-bottom: 1rem;
     }
   }
   .fgt-pass {
