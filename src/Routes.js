@@ -5,6 +5,7 @@ import SignUp from "./pages/Account/SignUp";
 import Verified from "./pages/VerifiedPage/Verified";
 import Home from "./pages/HomePage/Home";
 import Carousel from "./components/CarouselJourneys/CarouselJourneys";
+import NotFound from "./pages/NotFound/NotFound";
 
 export default function AppRoutes() {
   return (
@@ -15,6 +16,10 @@ export default function AppRoutes() {
       <Route path="/verified" element={<Verified />} />
       <Route path="/home" element={<Home />} />
       <Route path="/carousel" element={<Carousel />} />
+      <Route
+        path="*"
+        element={ <NotFound /> }
+      />
     </Routes>
   );
 }

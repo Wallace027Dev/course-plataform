@@ -7,6 +7,7 @@ export default function LogIn() {
     <Account>
       <div>
         <h1>Login</h1>
+				<p>Insira suas informações e se torne um desenvolvedor.</p>
       </div>
       {/* CONTAINER */}
       <section>

@@ -9,9 +9,11 @@ export const Btn = styled.button`
   border-radius: 0.5rem;
   margin: 0 0.25rem;
   :hover {
-    border: 1px solid var(--blue);
-    background-color: white;
-    color: var(--blue);
-    cursor: pointer;
+    @media (min-width: 425px) {
+      border: 1px solid var(--blue);
+      background-color: white;
+      color: var(--blue);
+      cursor: pointer;
+    }
   }
 `;
