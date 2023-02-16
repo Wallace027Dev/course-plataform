@@ -10,8 +10,24 @@ export default function SignUp() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  function handleSubmit(e) {
-    e.preventDefaut();
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    if (password.length < 6) {
+      alert("Sua senha deve ter no mínimo 6 caracteres!");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      alert("As senhas não conferem!");
+    }
+
+    try {
+      await signUp(email, password);
+    }
+		catch (error) {
+      alert("Ocorreu um erro ao tentar criar o usuário");
+    }
   }
 
   return (
@@ -22,7 +38,7 @@ export default function SignUp() {
       </div>
       {/* CONTAINER */}
       <section>
-        <form>
+        <form onSubmit={handleSubmit}>
           <label>Seu email</label>
           <input
             type="mail"
@@ -44,13 +60,11 @@ export default function SignUp() {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
 
-          <Btn onClick={handleSubmit} className="btn">
-            Criar conta
-          </Btn>
-          <div>
-            <p>Ao criar uma conta, você aceita programar & tomar muito café.</p>
-          </div>
+          <Btn className="btn">Criar conta</Btn>
         </form>
+        <div>
+          <p>Ao criar uma conta, você aceita programar & tomar muito café.</p>
+        </div>
         <div>
           <p>
             Já tem uma conta?{" "}

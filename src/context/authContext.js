@@ -7,14 +7,14 @@ import { auth } from "../services/firebase";
 
 const AuthContext = createContext();
 
-export function useAuth(){
-	return useContext(AuthContext)
+export function useAuth() {
+  return useContext(AuthContext);
 }
 
 export function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState();
 
-  function signUp(auth, email, password) {
+  function signUp(email, password) {
     return createUserWithEmailAndPassword(auth, email, password);
   }
 
