@@ -32,7 +32,7 @@ export default function MainPage() {
       <div className="fgt-pass">
         <p>Esqueceu a senha?</p>
 
-        <Link to="/">
+        <Link to="/forgot-password">
           <Btn className="lnk">Resetar senha</Btn>
         </Link>
       </div>

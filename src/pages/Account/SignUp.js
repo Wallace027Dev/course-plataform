@@ -1,5 +1,5 @@
 import { Btn } from "../../styles/Btn";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Account } from "./styled";
 import { useState } from "react";
 import { useAuth } from "../../context/authContext";
@@ -9,6 +9,7 @@ export default function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = useNavigate();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -17,15 +18,15 @@ export default function SignUp() {
       alert("Sua senha deve ter no mínimo 6 caracteres!");
       return;
     }
-
+		
     if (password !== confirmPassword) {
-      alert("As senhas não conferem!");
+			alert("As senhas não conferem!");
     }
-
+		
     try {
-      await signUp(email, password);
-    }
-		catch (error) {
+			await signUp(email, password);
+			navigate("/log-in");
+    } catch (error) {
       alert("Ocorreu um erro ao tentar criar o usuário");
     }
   }
@@ -41,7 +42,7 @@ export default function SignUp() {
         <form onSubmit={handleSubmit}>
           <label>Seu email</label>
           <input
-            type="mail"
+            type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />

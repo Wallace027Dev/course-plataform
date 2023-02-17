@@ -21,7 +21,7 @@ export const Account = styled.div`
         border: 1px solid var(--gray);
         border-radius: 1rem;
         margin-bottom: 1.5rem;
-        padding-left: 1.5rem;
+        padding: 0 1.5rem;
       }
       .btn {
         width: 18rem;
@@ -42,6 +42,12 @@ export const Account = styled.div`
     .lnk {
       font-weight: 700;
       text-decoration-line: underline;
+    }
+  }
+  @media (max-width: 425px) {
+    h1 {
+      max-width: 280px;
+      margin: 0 auto;
     }
   }
 `;

@@ -6,6 +6,8 @@ import Verified from "./pages/VerifiedPage/Verified";
 import Home from "./pages/HomePage/Home";
 import Carousel from "./components/CarouselJourneys/CarouselJourneys";
 import NotFound from "./pages/NotFound/NotFound";
+import ForgotPassword from "./pages/Account/ForgotPassword";
+import AccountPage from "./pages/Account/Account";
 
 export default function AppRoutes() {
   return (
@@ -13,13 +15,12 @@ export default function AppRoutes() {
       <Route path="/" element={<MainPage />} />
       <Route path="/sign-up" element={<SignUp />} />
       <Route path="/log-in" element={<LogIn />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/account-info" element={<AccountPage />} />
       <Route path="/verified" element={<Verified />} />
       <Route path="/home" element={<Home />} />
       <Route path="/carousel" element={<Carousel />} />
-      <Route
-        path="*"
-        element={ <NotFound /> }
-      />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

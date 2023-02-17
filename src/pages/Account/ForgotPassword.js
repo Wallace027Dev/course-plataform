@@ -4,30 +4,23 @@ import { useAuth } from "../../context/authContext";
 import { Btn } from "../../styles/Btn";
 import { Account } from "./styled";
 
-export default function LogIn() {
-  const { signIn } = useAuth();
-  const navigate = useNavigate();
+export default function ForgotPassword() {
+  const { resetPassword } = useAuth();
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState("");
+  const navigate = useNavigate();
 
   async function handleSubmit(e) {
     e.preventDefault();
 
     setLoading(true);
 
-    if (password.length < 6) {
-      alert("Sua senha deve ter no mínimo 6 caracteres!");
-      setLoading(false);
-      return;
-    }
-
     try {
-      await signIn(email, password);
-      navigate("/verified");
-    } catch (error) {
-      console.log(error.message);
-      alert("Ocorreu um erro ao tentar efetuar o login");
+      await resetPassword(email);
+      alert("Foi enviado um email para resetar sua senha");
+      navigate("/log-in");
+    } catch {
+      alert("Ocorreu um erro ao tentar resetar sua senha");
     }
 
     setLoading(false);
@@ -36,8 +29,8 @@ export default function LogIn() {
   return (
     <Account>
       <div>
-        <h1>Login</h1>
-        <p>Insira suas informações e se torne um desenvolvedor.</p>
+        <h1>Esqueci minha senha</h1>
+        <p>Não fique sem estudar!</p>
       </div>
       <section>
         <form onSubmit={handleSubmit}>
@@ -47,23 +40,15 @@ export default function LogIn() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-
-          <label>Senha</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-
           <Btn disabled={loading} className="btn">
-            Login
+            Recuperar senha
           </Btn>
         </form>
         <div>
           <p>
-            Não tem uma conta?{" "}
-            <Link className="lnk" to="/sign-up">
-              Inscrever-se
+            Já tem uma conta?{" "}
+            <Link className="lnk" to="/log-in">
+              Login
             </Link>
           </p>
         </div>
