@@ -13,10 +13,10 @@ export const Account = styled.div`
   }
   section {
     margin: 2.5rem auto;
-    width: 20rem;
+    width: 18rem;
     form {
       input {
-        width: 18rem;
+        width: 16rem;
         height: 3rem;
         border: 1px solid var(--gray);
         border-radius: 1rem;
@@ -24,7 +24,7 @@ export const Account = styled.div`
         padding-left: 1.5rem;
       }
       .btn {
-        width: 20rem;
+        width: 18rem;
         font-weight: 500;
         font-size: 1rem;
       }

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Carousels = styled.div`
   .car {
-    max-width: 288px;
+    max-width: 18rem;
     display: flex;
     flex-direction: row;
     overflow-x: auto;
@@ -15,7 +15,7 @@ export const Carousels = styled.div`
     background-color: var(--light-gray);
     margin: 0.75rem;
     padding: 0.75rem;
-    width: 240px;
+    width: 15rem;
     border-radius: 1rem;
     display: flex;
     align-items: center;
@@ -36,7 +36,7 @@ export const Carousels = styled.div`
         text-align: center;
         color: var(--dark-gray);
         padding: 0.1rem;
-        border-radius: 10px;
+        border-radius: 0.75rem;
       }
       .title {
         font-size: 1.1rem;

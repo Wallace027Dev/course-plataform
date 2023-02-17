@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Verify = styled.div`
+
   background-color: var(--light-gray);
   border-radius: 1rem;
   width: 18.15rem;

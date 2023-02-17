@@ -1,24 +1,63 @@
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/authContext";
 import { Btn } from "../../styles/Btn";
 import { Account } from "./styled";
 
 export default function LogIn() {
+  const { signIn } = useAuth();
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState("");
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    setLoading(true);
+
+    if (password.length < 6) {
+      alert("Sua senha deve ter no mínimo 6 caracteres!");
+      setLoading(false);
+      return;
+    }
+
+    try {
+      await signIn(email, password);
+      navigate("/verified");
+    } catch (error) {
+      console.log(error.message);
+      alert("Ocorreu um erro ao tentar efetuar o login");
+    }
+
+    setLoading(false);
+  }
+
   return (
     <Account>
       <div>
         <h1>Login</h1>
-				<p>Insira suas informações e se torne um desenvolvedor.</p>
+        <p>Insira suas informações e se torne um desenvolvedor.</p>
       </div>
-      {/* CONTAINER */}
       <section>
-        <form>
+        <form onSubmit={handleSubmit}>
           <label>Seu email</label>
-          <input type="mail" />
-          <label>Password</label>
-          <input type="password" />
-          <Link to="/verified">
-            <Btn className="btn">Logar</Btn>
-          </Link>
+          <input
+            type="mail"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+
+          <label>Senha</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+
+          <Btn disabled={loading} className="btn">
+            Login
+          </Btn>
         </form>
         <div>
           <p>

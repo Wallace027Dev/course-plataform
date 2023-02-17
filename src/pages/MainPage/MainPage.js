@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function MainPage() {
   return (
-    <Main>
+    <Main className="center">
       <img src={MainPageLight} alt="Main Page Photo" />
       <section>
         <h1>

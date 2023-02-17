@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Main = styled.div`
+	flex-direction: column;
   p {
     color: var(--gray);
     font-size: 0.75rem;

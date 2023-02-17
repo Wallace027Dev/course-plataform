@@ -46,7 +46,7 @@ export default function SignUp() {
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          <label>Confirmação de Senha</label>
+          <label>Senha</label>
           <input
             type="password"
             value={password}

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const HomeMain = styled.div`
-  width: 20.625rem;
   h1,
   h2 {
     color: var(--dark-gray);
@@ -21,26 +20,27 @@ export const HomeMain = styled.div`
     color: var(--gray);
     font-size: 0.75rem;
   }
-  input {
-    width: 90%;
-    height: 2.2rem;
-    background-color: var(--blue);
-    color: white;
-    border-radius: 0.5rem;
-    padding-left: 1rem;
-    margin: 1.2rem 0;
-    ::placeholder {
-      color: var(--light-gray);
-    }
-  }
+
   .prof-img {
     width: 11.25rem;
     border-radius: 1rem;
   }
   main {
-		h2 {
-			margin-top: 2rem;
-		}
+    input {
+      width: 12.5rem;
+      height: 2.2rem;
+      background-color: var(--blue);
+      color: white;
+      border-radius: 0.5rem;
+      padding-left: 1rem;
+      margin: 1.2rem 0;
+      ::placeholder {
+        color: var(--light-gray);
+      }
+    }
+    h2 {
+      margin-top: 1rem;
+    }
     > div {
       margin-bottom: 3rem;
       img {

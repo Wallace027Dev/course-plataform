@@ -4,7 +4,7 @@ import Courses from "../../components/Courses/Courses.js";
 
 export default function Home() {
   return (
-    <HomeMain>
+    <HomeMain className="center">
 			<div>
       <h1>Olá, Wallace</h1>
 			</div>
