@@ -41,7 +41,14 @@ export default function CarouselJourneys() {
   };
 
   if (loading) {
-    return <img src={loader} alt="Loading" className="spin" />;
+    return (
+      <img
+        style={{ marginTop: 100 }}
+        src={loader}
+        alt="Loading"
+        className="spin"
+      />
+    );
   } else if (!loading) {
     return (
       <Carousels>

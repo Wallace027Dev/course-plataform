@@ -34,7 +34,7 @@ export default function AccountPage() {
         <div>
           <p>
             Voltar para a{" "}
-            <Link className="lnk" to="/log-in">
+            <Link className="lnk" to="/home">
               home
             </Link>
             ?
