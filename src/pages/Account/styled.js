@@ -16,7 +16,7 @@ export const Account = styled.div`
     width: 18rem;
     form {
       input {
-        width: 16rem;
+        width: 15rem;
         height: 3rem;
         border: 1px solid var(--gray);
         border-radius: 1rem;

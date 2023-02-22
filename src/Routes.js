@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound/NotFound";
 import ForgotPassword from "./pages/Account/ForgotPassword";
 import AccountPage from "./pages/Account/Account";
 import { ProtectedRoute } from "./components/PrivateRoutes/PrivateRoutes";
+import Front from "./pages/Journeys/Front";
 
 export default function AppRoutes() {
   return (
@@ -36,9 +37,17 @@ export default function AppRoutes() {
       <Route
         path="/home"
         element={
-          <ProtectedRoute>
+          //<ProtectedRoute>
             <Home />
-          </ProtectedRoute>
+          //</ProtectedRoute>
+        }
+      />
+      <Route
+        path="/front"
+        element={
+          //<ProtectedRoute>
+            <Front />
+          //</ProtectedRoute>
         }
       />
     </Routes>

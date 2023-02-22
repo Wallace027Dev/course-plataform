@@ -3,6 +3,7 @@ import { Carousels } from "./styled";
 import seta from "../../images/seta.svg";
 import errorVideos from "../../images/errorVideos.svg";
 import loader from "../../images/loader-primary.svg";
+import { Link } from "react-router-dom";
 
 export default function CarouselJourneys() {
   const [data, setData] = useState([]);

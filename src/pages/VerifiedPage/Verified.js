@@ -2,14 +2,21 @@ import { useNavigate } from "react-router-dom";
 import { Verify } from "./styled";
 import SucessLog from "../../images/SucessLog.svg";
 import loader from "../../images/loader-primary.svg";
+import { useEffect, useState } from "react";
 
 export default function Verified() {
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
+  useEffect(() => {
     function Counter() {
-    navigate("/home");
-  }
-  setInterval(Counter, 2000); //2 segundos
+      setLoading(false);
+      navigate("/home");
+    }
+    if (loading) {
+      setTimeout(Counter, 2000);
+    } //2 segundos
+  }, []);
 
   return (
     <Verify>

@@ -41,10 +41,16 @@ export const HomeMain = styled.div`
     h2 {
       margin-top: 1rem;
     }
-    > div {
-      margin-bottom: 3rem;
+    .perfil {
+      margin-bottom: 2rem;
       img {
         margin-right: 0.5rem;
+      }
+    }
+    .journeys-link {
+      img {
+        height: 3rem;
+        margin: 2rem 0.5rem;
       }
     }
   }
