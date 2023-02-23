@@ -1,15 +1,15 @@
 import { Course } from "./styled";
 
-export default function Front() {
-  const front =
-    "https://content.staart.com/app/_p/e774057d-f0e8-4d5f-8076-33522fffb96d/thumb/Front-End.png";
+export default function Back() {
+  const back =
+    "https://content.staart.com/app/_p/eca8e48a-57b3-46a1-a6ae-923aca77fc11/thumb/Back-End.png";
 
   return (
     <Course>
       <nav className="navigator ">
         <div className="nav-bar ">
-          <h1>Frontend</h1>
-          <img src={front} alt="Front end logo" />{" "}
+          <h1>Backend</h1>
+          <img src={back} alt="Front end logo" />{" "}
         </div>
         <input type="text" placeholder="Pesquise sua aula" />
       </nav>

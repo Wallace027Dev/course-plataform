@@ -1,15 +1,15 @@
 import { Course } from "./styled";
 
-export default function Front() {
-  const front =
-    "https://content.staart.com/app/_p/e774057d-f0e8-4d5f-8076-33522fffb96d/thumb/Front-End.png";
+export default function Digital() {
+  const digitalHab =
+    "https://content.staart.com/app/_p/ea9d3a03-bfb4-4160-b59a-6cc30e15b3af/thumb/thumbnail (8).png";
 
   return (
     <Course>
       <nav className="navigator ">
         <div className="nav-bar ">
-          <h1>Frontend</h1>
-          <img src={front} alt="Front end logo" />{" "}
+          <h1>Habilidades Digitais</h1>
+          <img src={digitalHab} alt="Front end logo" />{" "}
         </div>
         <input type="text" placeholder="Pesquise sua aula" />
       </nav>

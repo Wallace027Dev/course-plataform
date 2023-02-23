@@ -9,6 +9,9 @@ import ForgotPassword from "./pages/Account/ForgotPassword";
 import AccountPage from "./pages/Account/Account";
 import { ProtectedRoute } from "./components/PrivateRoutes/PrivateRoutes";
 import Front from "./pages/Journeys/Front";
+import DataJ from "./pages/Journeys/DataJ";
+import Back from "./pages/Journeys/Back";
+import Digital from "./pages/Journeys/Digital";
 
 export default function AppRoutes() {
   return (
@@ -47,6 +50,30 @@ export default function AppRoutes() {
         element={
           //<ProtectedRoute>
             <Front />
+          //</ProtectedRoute>
+        }
+      />
+      <Route
+        path="/back"
+        element={
+          //<ProtectedRoute>
+            <Back />
+          //</ProtectedRoute>
+        }
+      />
+      <Route
+        path="/data"
+        element={
+          //<ProtectedRoute>
+            <DataJ />
+          //</ProtectedRoute>
+        }
+      />
+      <Route
+        path="/digital"
+        element={
+          //<ProtectedRoute>
+            <Digital />
           //</ProtectedRoute>
         }
       />
