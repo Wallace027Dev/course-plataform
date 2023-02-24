@@ -42,47 +42,47 @@ export default function AppRoutes() {
         path="/home"
         element={
           //<ProtectedRoute>
-            <Home />
+          <Home />
           //</ProtectedRoute>
         }
       />
       <Route
-        path="/front"
+        path="/home/e774057d-f0e8-4d5f-8076-33522fffb96d"
         element={
           //<ProtectedRoute>
-            <Front />
+          <Front />
           //</ProtectedRoute>
         }
       />
       <Route
-        path="/back"
+        path="/home/eca8e48a-57b3-46a1-a6ae-923aca77fc11"
         element={
           //<ProtectedRoute>
-            <Back />
+          <Back />
           //</ProtectedRoute>
         }
       />
       <Route
-        path="/data"
+        path="/home/73a0e476-b7b1-464d-9d73-8faa71b44922"
         element={
           //<ProtectedRoute>
-            <DataJ />
+          <DataJ />
           //</ProtectedRoute>
         }
       />
       <Route
-        path="/digital"
+        path="/home/ea9d3a03-bfb4-4160-b59a-6cc30e15b3af"
         element={
           //<ProtectedRoute>
-            <Digital />
+          <Digital />
           //</ProtectedRoute>
         }
       />
       <Route
-        path="/course"
+        path="/course/*"
         element={
           //<ProtectedRoute>
-            <Course />
+          <Course />
           //</ProtectedRoute>
         }
       />

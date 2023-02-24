@@ -38,6 +38,9 @@ export const Course = styled.div`
     margin: 2rem auto;
     flex-direction: row;
     justify-content: space-around;
+    img {
+      height: 3rem;
+    }
     h2 {
       font-size: 1rem;
     }

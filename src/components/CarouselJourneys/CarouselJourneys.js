@@ -55,16 +55,18 @@ export default function CarouselJourneys() {
       <Carousels>
         <div className="car" ref={carousel}>
           {data.map((item) => {
-            const { coursesID, medias, title, description } = item;
+            const { coursesID, pathID, medias, title, description } = item;
             return (
               <div className="item" key={coursesID}>
-                <div className="image">
-                  <img src={medias.thumb} alt="foto" />
-                </div>
-                <div className="info">
-                  <span className="title">{title}</span>
-                  <span className="group">{description}</span>
-                </div>
+                <Link to={`${pathID}`}>
+                  <div className="image">
+                    <img src={medias.thumb} alt="foto" />
+                  </div>
+                  <div className="info">
+                    <span className="title">{title}</span>
+                    <span className="group">{description}</span>
+                  </div>
+                </Link>
               </div>
             );
           })}
