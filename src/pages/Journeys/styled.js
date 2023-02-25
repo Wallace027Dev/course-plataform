@@ -30,19 +30,25 @@ export const Course = styled.div`
     }
   }
   .wrapper-course {
-    margin: 0;
     width: 18rem;
-    height: 6rem;
+    height: 6.5rem;
     border-radius: 1rem;
     background-color: var(--light-gray);
     margin: 2rem auto;
+    padding: 0 0.5rem;
     flex-direction: row;
     justify-content: space-around;
+    > div {
+      margin: 0 0.5rem;
+    }
     img {
-      height: 3rem;
+      height: 4.5rem;
+      width: 7.5rem;
+      border-radius: 0.25rem;
     }
     h2 {
-      font-size: 1rem;
+      font-size: 0.9rem;
+      font-weight: 500;
     }
     h3 {
       margin: 0.25rem 0;
@@ -50,16 +56,19 @@ export const Course = styled.div`
     }
     h3,
     p {
-      font-size: 0.75rem;
+      font-size: 0.6rem;
     }
     p {
-      width: 3.75rem;
+      width: 4.5rem;
       background-color: var(--dark-gray);
       border-radius: 1rem;
       color: var(--bg-color);
     }
   }
   .wrapper-course-info {
+    text-align: left;
     align-items: flex-start;
+    line-height: 0.9rem;
+    width: 12rem;
   }
 `;

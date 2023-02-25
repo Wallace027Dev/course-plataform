@@ -3,8 +3,8 @@ import { Course } from "./styled";
 import axios from "axios";
 
 export default function Back() {
-  const back =
-    "https://content.staart.com/app/_p/eca8e48a-57b3-46a1-a6ae-923aca77fc11/thumb/Back-End.png";
+  const journey = "eca8e48a-57b3-46a1-a6ae-923aca77fc11";
+  const logoJourney = `https://content.staart.com/app/_p/${journey}/thumb/Back-End.png`;
 
   const api = axios.create({
     baseURL: "https://frontend-project.staart.com/",
@@ -13,11 +13,8 @@ export default function Back() {
   const [courses, setCourses] = useState([]);
 
   const fetchCourses = useCallback(async () => {
-    const { data } = await api.get(
-      `journeys/eca8e48a-57b3-46a1-a6ae-923aca77fc11/courses`
-    );
+    const { data } = await api.get(`journeys/${journey}/courses`);
     setCourses(data || []);
-    console.log(data);
   }, []);
 
   useEffect(() => {
@@ -29,7 +26,7 @@ export default function Back() {
       <nav className="navigator">
         <div className="nav-bar">
           <h1>Backend</h1>
-          <img src={back} alt="Front end logo" />{" "}
+          <img src={logoJourney} alt="Front end logo" />{" "}
         </div>
         <input type="text" placeholder="Pesquise sua aula" />
       </nav>
@@ -42,12 +39,12 @@ export default function Back() {
             return (
               <div className="wrapper-course center" key={id}>
                 <div>
-                  <img src={medias.thumb} alt="Imagem" />
+                  <img className="center" src={medias.thumb} alt="Imagem" />
                 </div>
                 <div className="wrapper-course-info center">
                   <h2>{title}</h2>
                   <h3>{instructor}</h3>
-                  <p>{level}</p>
+                  <p className="center">{level}</p>
                 </div>
               </div>
             );
