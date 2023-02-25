@@ -1,7 +1,21 @@
 import styled from "styled-components";
 
 export const Course = styled.div`
+  h1,
+  h2 {
+    color: var(--dark-gray);
+  }
+  h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-align: left;
+  }
   .navigator {
+    text-align: left;
     margin: 1rem auto;
     width: 18rem;
     .nav-bar {
@@ -9,9 +23,6 @@ export const Course = styled.div`
       align-items: center;
       flex-direction: row;
       justify-content: space-between;
-      h1 {
-        text-align: left;
-      }
       img {
         height: 2rem;
       }
@@ -20,17 +31,12 @@ export const Course = styled.div`
       width: 12.5rem;
       height: 2.2rem;
       background-color: var(--blue);
-      color: white;
       border-radius: 0.5rem;
       padding-left: 1rem;
       margin: 1.2rem 0;
       ::placeholder {
         color: var(--light-gray);
       }
-    }
-    h1 {
-      font-weight: 700;
-      font-size: 1.5rem;
     }
     img {
       height: 3rem;
@@ -41,7 +47,7 @@ export const Course = styled.div`
     height: 6.5rem;
     border-radius: 1rem;
     background-color: var(--light-gray);
-    margin: 2rem auto;
+    margin-top: 2rem;
     padding: 0 0.5rem;
     flex-direction: row;
     justify-content: space-around;

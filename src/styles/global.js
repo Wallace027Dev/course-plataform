@@ -10,14 +10,23 @@ export default createGlobalStyle`
   padding: 0;
 }
 
+:root {
+  --blue: ${(props) => props.theme.colors.primary};
+  --gray: ${(props) => props.theme.colors.secondary};
+  --light-gray: ${(props) => props.theme.colors.tertiary};
+  --dark-gray: ${(props) => props.theme.colors.textColor};
+  --bg-color: ${(props) => props.theme.colors.bgColor};
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  background-color: ${(props) => props.theme.colors.bgColor};
+  background-color: var(--bg-color);
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 2rem auto;
   text-align: center;
+	width: 18rem;
 }
 
 .center {

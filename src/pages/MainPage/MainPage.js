@@ -1,13 +1,13 @@
 import { Main } from "./styled";
 import { Btn } from "../../styles/Btn";
-import MainPageLight from "../../images/MainPage-Light.svg";
+import MainBanner from "../../images/MainPage.svg";
 import LogoStaart from "../../images/LogoStaart.svg";
 import { Link } from "react-router-dom";
 
 export default function MainPage() {
   return (
     <Main className="center">
-      <img src={MainPageLight} alt="Main Page Photo" />
+      <img src={MainBanner} alt="Main Page Photo" />
       <section>
         <h1>
           Dê o <span>{<img src={LogoStaart} alt="Logo Staart" />}</span> na{" "}
@@ -22,7 +22,7 @@ export default function MainPage() {
       </section>
       <div>
         <Link to="/sign-up">
-          <Btn className="lnk">Inscrever</Btn>
+          <Btn className="lnk subscribe">Inscrever</Btn>
         </Link>
 
         <Link to="/log-in">

@@ -66,6 +66,12 @@ export default function LogIn() {
               Inscrever-se
             </Link>
           </p>
+          <p>
+            Esqueceu a senha?{" "}
+            <Link className="lnk" to="/forgot-password">
+              Resetar senha
+            </Link>
+          </p>
         </div>
       </section>
     </Account>

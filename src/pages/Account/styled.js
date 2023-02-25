@@ -2,9 +2,13 @@ import styled from "styled-components";
 
 export const Account = styled.div`
   div {
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: left;
     h1 {
       font-weight: 700;
       font-size: 2rem;
+      color: var(--dark-gray);
     }
     p {
       color: var(--gray);
@@ -42,6 +46,7 @@ export const Account = styled.div`
     .lnk {
       font-weight: 700;
       text-decoration-line: underline;
+      color: var(--blue);
     }
   }
   @media (max-width: 425px) {

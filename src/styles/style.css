@@ -1,18 +1,8 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-
-* {
+/* * {
   text-decoration: none;
   border: none;
   margin: 0;
   padding: 0;
-}
-
-:root {
-  --blue: #3d5cff;
-  --gray: #858597;
-  --light-gray: #dcdce7;
-  --dark-gray: #1f1f39;
-  --bg-color: #fff;
 }
 
 body {
@@ -23,6 +13,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 2rem auto;
   text-align: center;
+	width: 18rem;
 }
 
 .center {

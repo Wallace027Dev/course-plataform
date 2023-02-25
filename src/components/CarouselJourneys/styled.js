@@ -41,9 +41,11 @@ export const Carousels = styled.div`
       .title {
         font-size: 1.1rem;
         font-weight: bold;
+        color: var(--dark-gray);
       }
       .group {
         font-size: 0.7rem;
+        color: var(--gray);
       }
     }
   }

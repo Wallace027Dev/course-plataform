@@ -32,7 +32,7 @@ export default function Back() {
       </nav>
       <main>
         <h2>Escolha sua Jornada</h2>
-        <div>
+        <div className="center">
           {/* Cursos aqui */}
           {courses.map((item) => {
             const { id, title, medias, instructor, level } = item;
