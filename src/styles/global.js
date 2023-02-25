@@ -1,4 +1,7 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+import { createGlobalStyle } from "styled-components";
+
+export default createGlobalStyle`
+	@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 * {
   text-decoration: none;
@@ -7,17 +10,9 @@
   padding: 0;
 }
 
-:root {
-  --blue: #3d5cff;
-  --gray: #858597;
-  --light-gray: #dcdce7;
-  --dark-gray: #1f1f39;
-  --bg-color: #fff;
-}
-
 body {
   font-family: "Poppins", sans-serif;
-  background-color: var(--bg-color);
+  background-color: ${(props) => props.theme.colors.bgColor};
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -58,4 +53,6 @@ body {
     max-width: 315px;
   }
 }
- */
+
+
+`;

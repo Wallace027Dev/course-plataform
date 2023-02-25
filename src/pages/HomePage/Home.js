@@ -3,12 +3,13 @@ import CarouselJourneys from "../../components/CarouselJourneys/CarouselJourneys
 import { Link } from "react-router-dom";
 
 export default function Home() {
+
   return (
     <HomeMain className="center">
+      <Link className="lnk" to="/account-info">
+        Mexer na conta
+      </Link>
       <div className="perfil">
-        <Link className="lnk" to="/account-info">
-          Mexer na conta
-        </Link>
         <h1>🖐 Olá, Wallace</h1>
       </div>
       <main>

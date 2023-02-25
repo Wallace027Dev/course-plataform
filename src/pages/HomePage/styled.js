@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HomeMain = styled.div`
   h1,
   h2 {
-    color: var(--dark-gray);
+    color: ${(props) => props.theme.colors.textColor};
   }
   h1 {
     font-weight: 700;
@@ -29,13 +29,13 @@ export const HomeMain = styled.div`
     input {
       width: 12.5rem;
       height: 2.2rem;
-      background-color: var(--blue);
+      ${(props) => props.theme.colors.primary};
       color: white;
       border-radius: 0.5rem;
       padding-left: 1rem;
       margin: 1.2rem 0;
       ::placeholder {
-        color: var(--light-gray);
+        ${(props) => props.theme.colors.tertiary};
       }
     }
     h2 {
