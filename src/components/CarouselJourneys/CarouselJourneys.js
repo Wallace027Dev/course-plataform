@@ -64,7 +64,7 @@ export default function CarouselJourneys() {
                   </div>
                   <div className="info">
                     <span className="title">{title}</span>
-                    <span className="group">{description}</span>
+                    <span className="description">{description}</span>
                   </div>
                 </Link>
               </div>

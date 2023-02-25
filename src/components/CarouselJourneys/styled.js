@@ -14,7 +14,7 @@ export const Carousels = styled.div`
   .item {
     background-color: var(--light-gray);
     margin: 0.75rem;
-    padding: 0.75rem;
+    padding: 1.25rem 0.75rem;
     width: 15rem;
     border-radius: 1rem;
     display: flex;
@@ -39,11 +39,12 @@ export const Carousels = styled.div`
         border-radius: 0.75rem;
       }
       .title {
+				margin-top: 1rem;
         font-size: 1.1rem;
         font-weight: bold;
         color: var(--dark-gray);
       }
-      .group {
+      .description {
         font-size: 0.7rem;
         color: var(--gray);
       }

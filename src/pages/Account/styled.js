@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Account = styled.div`
   div {
     margin: 0 auto;
-    padding: 0 1rem;
     text-align: left;
     h1 {
       font-weight: 700;
@@ -33,6 +32,7 @@ export const Account = styled.div`
         font-size: 1rem;
       }
       label {
+				margin-bottom: 0.25rem;
         font-size: 0.8rem;
         color: var(--gray);
         display: flex;
@@ -41,7 +41,7 @@ export const Account = styled.div`
     }
     p {
       font-size: 0.75rem;
-      margin-top: 1rem;
+      margin: 1rem;
     }
     .lnk {
       font-weight: 700;

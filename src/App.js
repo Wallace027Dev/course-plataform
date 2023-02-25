@@ -28,7 +28,7 @@ function App() {
             uncheckedIcon={false}
             handleDiameter={20}
             onHandleColor="#dcdce7"
-            offColor="#1f1f39"
+            offColor="#2F2F42"
             onColor="#3d5cff"
           />
           <ThemeProvider theme={theme}>

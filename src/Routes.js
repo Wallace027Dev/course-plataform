@@ -1,4 +1,6 @@
 import { Routes, Route } from "react-router-dom";
+import { ProtectedRoute } from "./components/PrivateRoutes/PrivateRoutes";
+
 import LogIn from "./pages/Account/LogIn";
 import MainPage from "./pages/MainPage/MainPage";
 import SignUp from "./pages/Account/SignUp";
@@ -7,12 +9,10 @@ import Home from "./pages/HomePage/Home";
 import NotFound from "./pages/NotFound/NotFound";
 import ForgotPassword from "./pages/Account/ForgotPassword";
 import AccountPage from "./pages/Account/Account";
-import { ProtectedRoute } from "./components/PrivateRoutes/PrivateRoutes";
 import Front from "./pages/Journeys/Front";
 import DataJ from "./pages/Journeys/DataJ";
 import Back from "./pages/Journeys/Back";
 import Digital from "./pages/Journeys/Digital";
-import Course from "./pages/Course/Course";
 
 export default function AppRoutes() {
   return (
@@ -75,14 +75,6 @@ export default function AppRoutes() {
         element={
           //<ProtectedRoute>
           <Digital />
-          //</ProtectedRoute>
-        }
-      />
-      <Route
-        path="/course/*"
-        element={
-          //<ProtectedRoute>
-          <Course />
           //</ProtectedRoute>
         }
       />
