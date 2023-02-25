@@ -1,15 +1,32 @@
+import { useCallback, useEffect, useState } from "react";
 import { Course } from "./styled";
+import axios from "axios";
 
-export default function Digital() {
-  const digitalHab =
-    "https://content.staart.com/app/_p/ea9d3a03-bfb4-4160-b59a-6cc30e15b3af/thumb/thumbnail (8).png";
+export default function Back() {
+  const journey = "ea9d3a03-bfb4-4160-b59a-6cc30e15b3af";
+  const logoJourney = `https://content.staart.com/app/_p/${journey}/thumb/thumbnail (8).png`;
+
+  const api = axios.create({
+    baseURL: "https://frontend-project.staart.com/",
+  });
+
+  const [courses, setCourses] = useState([]);
+
+  const fetchCourses = useCallback(async () => {
+    const { data } = await api.get(`journeys/${journey}/courses`);
+    setCourses(data || []);
+  }, []);
+
+  useEffect(() => {
+    fetchCourses();
+  }, []);
 
   return (
     <Course>
-      <nav className="navigator ">
-        <div className="nav-bar ">
-          <h1>Habilidades Digitais</h1>
-          <img src={digitalHab} alt="Front end logo" />{" "}
+      <nav className="navigator">
+        <div className="nav-bar">
+          <h1>Backend</h1>
+          <img src={logoJourney} alt="Digital Technologies logo" />{" "}
         </div>
         <input type="text" placeholder="Pesquise sua aula" />
       </nav>
@@ -17,16 +34,21 @@ export default function Digital() {
         <h2>Escolha sua Jornada</h2>
         <div>
           {/* Cursos aqui */}
-          <div className="wrapper-course center">
-            <div>
-              <img src="#" alt="Imagem" />
-            </div>
-            <div className="wrapper-course-info center">
-              <h2>Aula</h2>
-              <h3>Descrição aula</h3>
-              <p>1 horas</p>
-            </div>
-          </div>
+          {courses.map((item) => {
+            const { id, title, medias, instructor, level } = item;
+            return (
+              <div className="wrapper-course center" key={id}>
+                <div>
+                  <img className="center" src={medias.thumb} alt="Imagem" />
+                </div>
+                <div className="wrapper-course-info center">
+                  <h2>{title}</h2>
+                  <h3>{instructor}</h3>
+                  <p className="center">{level}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </main>
     </Course>
