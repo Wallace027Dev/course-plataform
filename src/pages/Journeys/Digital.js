@@ -25,7 +25,7 @@ export default function Back() {
     <Course>
       <nav className="navigator">
         <div className="nav-bar">
-          <h1>Backend</h1>
+          <h1>Digital Technologies</h1>
           <img src={logoJourney} alt="Digital Technologies logo" />{" "}
         </div>
         <input type="text" placeholder="Pesquise sua aula" />

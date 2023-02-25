@@ -8,6 +8,9 @@ export const Course = styled.div`
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      h1 {
+        text-align: left;
+      }
     }
     input {
       width: 12.5rem;
