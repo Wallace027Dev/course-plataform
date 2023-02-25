@@ -25,9 +25,9 @@ export default function AppRoutes() {
       <Route
         path="/account-info"
         element={
-          //<ProtectedRoute>
+          <ProtectedRoute>
             <AccountPage />
-          //</ProtectedRoute>
+          </ProtectedRoute>
         }
       />
       <Route
@@ -41,41 +41,41 @@ export default function AppRoutes() {
       <Route
         path="/home"
         element={
-          //<ProtectedRoute>
-          <Home />
-          //</ProtectedRoute>
+          <ProtectedRoute>
+            <Home />
+          </ProtectedRoute>
         }
       />
       <Route
         path="/home/e774057d-f0e8-4d5f-8076-33522fffb96d"
         element={
-          //<ProtectedRoute>
-          <Front />
-          //</ProtectedRoute>
+          <ProtectedRoute>
+            <Front />
+          </ProtectedRoute>
         }
       />
       <Route
         path="/home/eca8e48a-57b3-46a1-a6ae-923aca77fc11"
         element={
-          //<ProtectedRoute>
-          <Back />
-          //</ProtectedRoute>
+          <ProtectedRoute>
+            <Back />
+          </ProtectedRoute>
         }
       />
       <Route
         path="/home/73a0e476-b7b1-464d-9d73-8faa71b44922"
         element={
-          //<ProtectedRoute>
-          <DataJ />
-          //</ProtectedRoute>
+          <ProtectedRoute>
+            <DataJ />
+          </ProtectedRoute>
         }
       />
       <Route
         path="/home/ea9d3a03-bfb4-4160-b59a-6cc30e15b3af"
         element={
-          //<ProtectedRoute>
-          <Digital />
-          //</ProtectedRoute>
+          <ProtectedRoute>
+            <Digital />
+          </ProtectedRoute>
         }
       />
     </Routes>

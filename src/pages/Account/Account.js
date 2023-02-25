@@ -28,7 +28,7 @@ export default function AccountPage() {
           <p>Email: {currentUser.email}</p>
         </div>
         <div>
-          <img src={perfil} alt="" />
+          <img src={perfil} alt="Foto de Perfil" />
         </div>
       </div>
       <section>
