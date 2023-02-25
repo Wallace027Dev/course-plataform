@@ -1,11 +1,12 @@
 import { BrowserRouter } from "react-router-dom";
-import AppRoutes from "./Routes";
 import { AuthProvider } from "./context/authContext";
-import Switch from "react-switch";
 import { ThemeProvider } from "styled-components";
 import { useState } from "react";
-import GlobalStyle from "./styles/global";
+import AppRoutes from "./Routes";
+import Switch from "react-switch";
 
+import MyComponent from "./styles/global";
+import "./styles/style.css";
 import light from "./themes/light";
 import dark from "./themes/dark";
 
@@ -33,7 +34,7 @@ function App() {
           />
           <ThemeProvider theme={theme}>
             <AppRoutes />
-            <GlobalStyle />
+            <MyComponent />
           </ThemeProvider>
         </BrowserRouter>
       </AuthProvider>

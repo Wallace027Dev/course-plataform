@@ -19,7 +19,7 @@ export default function Verified() {
   }, []);
 
   return (
-    <Verify>
+    <Verify className="center">
       <div>
         <img src={SucessLog} alt="Ícone de sucesso" />
         <h2>Sucess</h2>

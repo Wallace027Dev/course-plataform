@@ -1,6 +1,17 @@
 import styled from "styled-components";
 
 export const Account = styled.div`
+  .info-perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 16rem;
+    img {
+      margin-top: 1rem;
+      width: 5rem;
+    }
+  }
   div {
     margin: 0 auto;
     text-align: left;
@@ -32,7 +43,7 @@ export const Account = styled.div`
         font-size: 1rem;
       }
       label {
-				margin-bottom: 0.25rem;
+        margin-bottom: 0.25rem;
         font-size: 0.8rem;
         color: var(--gray);
         display: flex;

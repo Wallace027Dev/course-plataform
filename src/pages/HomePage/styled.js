@@ -25,6 +25,17 @@ export const HomeMain = styled.div`
     width: 11.25rem;
     border-radius: 1rem;
   }
+  .perfil {
+    span {
+      img {
+        margin-top: 1rem;
+        height: 2rem;
+      }
+      background-color: #1f1f39;
+      border: 0.25rem solid #1f1f39;
+      border-radius: 0.5rem;
+    }
+  }
   main {
     input {
       width: 12.5rem;
@@ -40,12 +51,6 @@ export const HomeMain = styled.div`
     }
     h2 {
       margin-top: 1rem;
-    }
-    .perfil {
-      margin-bottom: 2rem;
-      img {
-        margin-right: 0.5rem;
-      }
     }
     .journeys-link {
       img {

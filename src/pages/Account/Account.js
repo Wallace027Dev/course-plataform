@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/authContext";
 import { Btn } from "../../styles/Btn";
 import { Account } from "./styled";
+import perfil from "../../images/perfil.svg";
 
 export default function AccountPage() {
   const { currentUser, logOut } = useAuth();
@@ -21,9 +22,14 @@ export default function AccountPage() {
 
   return (
     <Account>
-      <div>
-        <h1>Minha conta</h1>
-        <p>Email: {currentUser.email}</p>
+      <div className="info-perfil center">
+        <div>
+          <h1>Minha conta</h1>
+          <p>Email: {currentUser.email}</p>
+        </div>
+        <div>
+          <img src={perfil} alt="" />
+        </div>
       </div>
       <section>
         <form>

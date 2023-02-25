@@ -25,9 +25,9 @@ export default function AppRoutes() {
       <Route
         path="/account-info"
         element={
-          <ProtectedRoute>
+          //<ProtectedRoute>
             <AccountPage />
-          </ProtectedRoute>
+          //</ProtectedRoute>
         }
       />
       <Route

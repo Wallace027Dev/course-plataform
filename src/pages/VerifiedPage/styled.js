@@ -1,12 +1,10 @@
 import styled from "styled-components";
 
 export const Verify = styled.div`
-
   background-color: var(--light-gray);
   border-radius: 1rem;
   width: 18.15rem;
   height: 18.75rem;
-  margin: 16rem auto;
   div {
     padding: 2.25rem 1rem;
     display: flex;
