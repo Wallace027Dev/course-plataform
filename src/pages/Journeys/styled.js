@@ -6,10 +6,14 @@ export const Course = styled.div`
     width: 18rem;
     .nav-bar {
       display: flex;
+      align-items: center;
       flex-direction: row;
       justify-content: space-between;
       h1 {
         text-align: left;
+      }
+      img {
+        height: 2rem;
       }
     }
     input {
