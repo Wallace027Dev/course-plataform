@@ -27,9 +27,13 @@ export default function LogIn() {
     try {
       await signIn(email, password);
       // Armazena as informações de login no localStorage após o login ser realizado com sucesso
-      localStorage.setItem("token", "seuTokenDeAutenticacao");
-      const user = { nome: "fulano", email: email };
-      localStorage.setItem("user", JSON.stringify(user));
+      if (typeof localStorage !== "undefined") {
+        localStorage.setItem("token", "seuTokenDeAutenticacao");
+        const user = { nome: "fulano", email: email };
+        localStorage.setItem("user", JSON.stringify(user));
+      }
+      // chama a função navigate diretamente após o localStorage.setItem
+      navigate("/verified");
     } catch (error) {
       console.log(error.message);
       alert("Ocorreu um erro ao tentar efetuar o login");
@@ -42,7 +46,7 @@ export default function LogIn() {
     if (isAuthenticated()) {
       navigate("/verified");
     }
-  }, [navigate]);
+  }, [isAuthenticated, navigate]);
 
   return (
     <Account>
