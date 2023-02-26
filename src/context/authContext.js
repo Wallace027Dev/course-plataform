@@ -25,13 +25,27 @@ export function AuthProvider({ children }) {
     return createUserWithEmailAndPassword(auth, email, password);
   }
 
-  function signIn(email, password) {
+  function signIn(email, password, token) {
+    localStorage.setItem("token", token);
+    setCurrentUser({ token });
     return signInWithEmailAndPassword(auth, email, password);
   }
 
   function resetPassword(newEmail) {
     return sendPasswordResetEmail(auth, newEmail);
   }
+
+  const isAuthenticated = () => {
+    const token = localStorage.getItem("token");
+    return !!token;
+  };
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      setCurrentUser({ token });
+    }
+  }, []);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -48,6 +62,7 @@ export function AuthProvider({ children }) {
         signIn: signIn,
         logOut: logOut,
         currentUser: currentUser,
+        isAuthenticated: isAuthenticated,
       }}
     >
       {children}
