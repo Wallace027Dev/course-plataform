@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/authContext";
 import { Btn } from "../../styles/Btn";
 import { Account } from "./styled";
-import { isAuthenticated } from "../../context/utils.js";
-const localStorage = window.localStorage;
 
 export default function LogIn() {
   const navigate = useNavigate();
@@ -26,14 +24,7 @@ export default function LogIn() {
 
     try {
       await signIn(email, password);
-      // Armazena as informações de login no localStorage após o login ser realizado com sucesso
-      if (typeof localStorage !== "undefined") {
-        localStorage.setItem("token", "seuTokenDeAutenticacao");
-        const user = { nome: "fulano", email: email };
-        localStorage.setItem("user", JSON.stringify(user));
-      }
-      // chama a função navigate diretamente após o localStorage.setItem
-      navigate("/verified");
+      navigate("/home");
     } catch (error) {
       console.log(error.message);
       alert("Ocorreu um erro ao tentar efetuar o login");
@@ -41,12 +32,6 @@ export default function LogIn() {
 
     setLoading(false);
   }
-
-  useEffect(() => {
-    if (isAuthenticated()) {
-      navigate("/verified");
-    }
-  }, [isAuthenticated, navigate]);
 
   return (
     <Account>
