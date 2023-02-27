@@ -8,7 +8,6 @@ export const HomeMain = styled.div`
   h1 {
     font-weight: 700;
     font-size: 1.4rem;
-    margin-bottom: 3.75rem;
   }
   h2 {
     font-size: 1.2rem;
@@ -20,22 +19,6 @@ export const HomeMain = styled.div`
     color: var(--gray);
     font-size: 0.75rem;
   }
-
-  .prof-img {
-    width: 11.25rem;
-    border-radius: 1rem;
-  }
-  .perfil {
-    span {
-      img {
-        margin-top: 1rem;
-        height: 2rem;
-      }
-      background-color: #1f1f39;
-      border: 0.25rem solid #1f1f39;
-      border-radius: 0.5rem;
-    }
-  }
   main {
     input {
       width: 12.5rem;
@@ -46,7 +29,8 @@ export const HomeMain = styled.div`
       padding-left: 1rem;
       margin: 1.2rem 0;
       ::placeholder {
-        color: var(--light-gray);
+        color: white;
+        font-size: 0.9rem;
       }
     }
     h2 {

@@ -1,37 +1,44 @@
 import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "./context/authContext";
 import { ThemeProvider } from "styled-components";
+import { NavBar } from "./styles/NavBar";
 import { useState } from "react";
 import AppRoutes from "./Routes";
 import Switch from "react-switch";
 
 import MyComponent from "./styles/global";
-import "./styles/style.css";
+import iconStaart from "./images/icon-staart.png";
 import light from "./themes/light";
 import dark from "./themes/dark";
+import "./styles/style.css";
 
 function App() {
-  const [theme, setTheme] = useState(light);
+  const [theme, setTheme] = useState(dark);
 
   const onChangeTheme = () => {
-    setTheme(theme.name === "light" ? dark : light);
+    setTheme(theme.name === "dark" ? light : dark);
   };
   return (
     <>
       <AuthProvider>
         <BrowserRouter>
-          <Switch
-            onChange={onChangeTheme}
-            checked={theme.name === "light"}
-            height={20}
-            width={40}
-            checkedIcon={false}
-            uncheckedIcon={false}
-            handleDiameter={20}
-            onHandleColor="#dcdce7"
-            offColor="#2F2F42"
-            onColor="#3d5cff"
-          />
+          <NavBar>
+            <div>
+              {<img src={iconStaart} alt="Logo Staart" />}
+              <Switch
+                onChange={onChangeTheme}
+                checked={theme.name === "dark"}
+                height={20}
+                width={40}
+                checkedIcon={false}
+                uncheckedIcon={false}
+                handleDiameter={20}
+                onHandleColor="#dcdce7"
+                offColor="#2F2F42"
+                onColor="#858597"
+              />
+            </div>
+          </NavBar>
           <ThemeProvider theme={theme}>
             <AppRoutes />
             <MyComponent />

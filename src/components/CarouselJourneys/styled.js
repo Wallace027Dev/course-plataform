@@ -39,7 +39,7 @@ export const Carousels = styled.div`
         border-radius: 0.75rem;
       }
       .title {
-				margin-top: 1rem;
+        margin-top: 1rem;
         font-size: 1.1rem;
         font-weight: bold;
         color: var(--dark-gray);
@@ -65,7 +65,7 @@ export const Carousels = styled.div`
         width: 1rem;
         padding: 0.5rem;
         border-radius: 1rem;
-        background-color: var(--light-gray);
+        background-color: var(--blue);
       }
 
       :first-child img {
