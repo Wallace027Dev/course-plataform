@@ -13,7 +13,7 @@ export const Carousels = styled.div`
   }
   .item {
     margin: 0.75rem;
-    padding: 1.25rem 0.75rem;
+    padding: 0 0.75rem;
     width: 15rem;
     border-radius: 1rem;
     display: flex;
@@ -34,19 +34,16 @@ export const Carousels = styled.div`
         display: block;
         text-align: center;
         color: var(--dark-gray);
-        padding: 0.1rem;
         border-radius: 0.75rem;
       }
       .title {
-        margin-top: 1rem;
-        font-size: 1.1rem;
+        font-size: 1.25rem;
         font-weight: bold;
         color: var(--dark-gray);
       }
       img {
-				background-color: #1F1F39;
-				padding: 0.5rem 2rem;
-				border-radius: 0.25rem;
+        background-color: #1f1f39;
+        padding: 0.5rem 2rem;
         width: 6rem;
       }
     }

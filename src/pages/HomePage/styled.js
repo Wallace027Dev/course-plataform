@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HomeMain = styled.div`
+export const HomeMain = styled.main`
   h1,
   h2 {
     color: var(--dark-gray);
@@ -19,27 +19,60 @@ export const HomeMain = styled.div`
     color: var(--gray);
     font-size: 0.75rem;
   }
-  main {
-    input {
-      width: 12.5rem;
-      height: 2.2rem;
-      background-color: var(--blue);
-      color: white;
-      border-radius: 0.5rem;
-      padding-left: 1rem;
-      margin: 1.2rem 0;
-      ::placeholder {
-        color: white;
-        font-size: 0.9rem;
-      }
+  .info-staart {
+    margin-bottom: 2rem;
+    text-align: center;
+    div {
+      width: 16rem;
     }
     h2 {
-      margin-top: 1rem;
+      color: var(dark-gray);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      span {
+        color: var(--blue);
+      }
     }
-    .journeys-link {
+    h3 {
+      color: var(--gray);
+      font-weight: 400;
+    }
+    .container {
+      div {
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--light-gray);
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        p {
+          width: 75%;
+          text-align: left;
+          color: var(--dark-gray);
+        }
+      }
+    }
+  }
+  .main {
+    text-align: center;
+    h2 {
+      width: 16rem;
+      color: var(dark-gray);
+      font-weight: 500;
+      span {
+        color: var(--blue);
+      }
+    }
+    .wrapper {
+      margin-top: 2rem;
+      margin-bottom: 20rem;
+      height: 16rem;
+      width: 16rem;
+      border-radius: 0.5rem;
+      background-color: var(--light-gray);
       img {
-        height: 3rem;
-        margin: 2rem 0.5rem;
+        width: 7.5rem;
+				border-radius: 0.5rem;
       }
     }
   }

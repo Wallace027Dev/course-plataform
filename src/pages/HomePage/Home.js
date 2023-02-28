@@ -1,24 +1,73 @@
 import { HomeMain } from "./styled";
 import CarouselJourneys from "../../components/CarouselJourneys/CarouselJourneys";
 import CarouselProfs from "../../components/CarouselProfs/CarouselProfs";
+import bandeira from "../../images/bandeira.svg";
+import menu from "../../images/menu.svg";
+import money from "../../images/money.svg";
+import wallace from "../../images/wallace.jpg";
 
 export default function Home(props) {
   return (
     <HomeMain className="center">
-      <main>
+      <div>
         <h2>Explore</h2>
-        <p>O que você vai estudar hoje?</p>
-        <input type="text" placeholder="Pesquise a jornada ou aula" />
-        <h2>Escolha sua Jornada</h2>
-        {/* Aqui vai as jornadas */}
+      </div>
+
+      <section className="info-staart center">
         <div>
+          <h2>
+            Staart é uma plataforma inovadora de <span>educação</span> em{" "}
+            <span>tecnologia</span>
+          </h2>
+          <h3>
+            Nossas jornadas são pensadas para você que está começando e ainda
+            não sabe como navegar nesse mar de conteúdos disponíveis na
+            internet.
+          </h3>
+        </div>
+        <div className="container center">
+          <div>
+            <img src={bandeira} alt="Bandeira" />
+            <p>Ingressar ou crescer no mercado de tecnologia</p>
+          </div>
+          <div>
+            <img src={menu} alt="Bandeira" />
+            <p>Aprimorar processos e aumentar a produtividade</p>
+          </div>
+          <div>
+            <img src={money} alt="Bandeira" />
+            <p>Preparar-se para os melhores empregos e remunerações</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="main">
+        <div className="center">
+          <h2>
+            Escolha sua <span>jornada</span>
+          </h2>
           <CarouselJourneys />
         </div>
-        {/* Aqui vai as jornadas */}
-        <div>
-					<CarouselProfs />
-				</div>
-      </main>
+        <div className="center">
+          <h2>
+            Os <span>maiores especialistas</span> da área selecionados para
+            orienta <span>você</span>
+          </h2>
+          <CarouselProfs />
+        </div>
+        <div className="center">
+          <div className="wrapper center">
+            <img src={wallace} alt="Foto wallace" />
+            <h2>Frontend Developer</h2>
+            <div>
+              <h1>
+                <span>Wallace</span> Vieira
+              </h1>
+              <a href="http://wallace027dev.vercel.app/">Conheça meu trampo</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </HomeMain>
   );
 }
