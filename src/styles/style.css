@@ -56,9 +56,3 @@ body {
   -webkit-animation: spin 1s infinite linear;
   -moz-animation: spin 1s infinite linear;
 }
-
-@media (max-width: 425px) {
-  body {
-    max-width: 315px;
-  }
-}
