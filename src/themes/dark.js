@@ -2,10 +2,10 @@ const darkTheme = {
   name: "dark",
   colors: {
     primary: "#3d5cff",
-    secondary: "#f4f3e5",
+    secondary: "#e4e3e0",
     tertiary: "#2F2F42",
 
-    textColor: "#eaeaff",
+    textColor: "#fff",
     bgColor: "#1F1F39",
   },
 };
