@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Account = styled.div`
+  margin: 2.5rem auto;
+  width: 18rem;
   .info-perfil {
     display: flex;
     justify-content: center;
@@ -26,15 +28,15 @@ export const Account = styled.div`
     }
   }
   section {
-    margin: 2.5rem auto;
-    width: 18rem;
     form {
+      .btn {
+        margin-top: 1rem;
+      }
       input {
         width: 15rem;
         height: 3rem;
         border: 1px solid var(--gray);
         border-radius: 1rem;
-        margin-bottom: 1.5rem;
         padding: 0 1.5rem;
       }
       .btn {
@@ -43,6 +45,7 @@ export const Account = styled.div`
         font-size: 1rem;
       }
       label {
+        margin-top: 1rem;
         margin-bottom: 0.25rem;
         font-size: 0.8rem;
         color: var(--gray);

@@ -11,6 +11,7 @@ import iconStaart from "./images/icon-staart.png";
 import light from "./themes/light";
 import dark from "./themes/dark";
 import "./styles/style.css";
+import Navigation from "./components/NavigationAccount/NavigationAccount";
 
 function App() {
   const [theme, setTheme] = useState(dark);
@@ -24,7 +25,10 @@ function App() {
         <BrowserRouter>
           <NavBar>
             <div>
-              {<img src={iconStaart} alt="Logo Staart" />}
+              <a href="https://app.staart.com/">
+                {<img src={iconStaart} alt="Logo Staart" />}
+              </a>
+              <Navigation />
               <Switch
                 onChange={onChangeTheme}
                 checked={theme.name === "dark"}

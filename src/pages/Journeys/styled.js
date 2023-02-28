@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Course = styled.div`
+  margin: 2.5rem auto;
+  width: 18rem;
   h1,
   h2 {
     color: var(--dark-gray);
@@ -30,12 +32,14 @@ export const Course = styled.div`
     input {
       width: 12.5rem;
       height: 2.2rem;
-      background-color: var(--blue);
       border-radius: 0.5rem;
       padding-left: 1rem;
       margin: 1.2rem 0;
+      background-color: var(--blue);
+      color: white;
       ::placeholder {
-        color: var(--light-gray);
+        color: white;
+        font-size: 0.9rem;
       }
     }
     img {
