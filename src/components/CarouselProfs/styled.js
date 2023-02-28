@@ -44,6 +44,7 @@ export const Carousels = styled.div`
       img {
         background-color: #1f1f39;
         padding: 0.5rem 2rem;
+        border-radius: 0.25rem;
         width: 6rem;
       }
     }

@@ -4,6 +4,7 @@ import CarouselProfs from "../../components/CarouselProfs/CarouselProfs";
 import bandeira from "../../images/bandeira.svg";
 import menu from "../../images/menu.svg";
 import money from "../../images/money.svg";
+import linkImg from "../../images/linkImg.svg";
 import wallace from "../../images/wallace.jpg";
 
 export default function Home(props) {
@@ -48,7 +49,7 @@ export default function Home(props) {
           </h2>
           <CarouselJourneys />
         </div>
-        <div className="center">
+        <div className="center margin-top">
           <h2>
             Os <span>maiores especialistas</span> da área selecionados para
             orienta <span>você</span>
@@ -59,10 +60,11 @@ export default function Home(props) {
           <div className="wrapper center">
             <img src={wallace} alt="Foto wallace" />
             <h2>Frontend Developer</h2>
-            <div>
               <h1>
                 <span>Wallace</span> Vieira
               </h1>
+            <div>
+							<img src={linkImg} alt="Icone de link" />
               <a href="http://wallace027dev.vercel.app/">Conheça meu trampo</a>
             </div>
           </div>

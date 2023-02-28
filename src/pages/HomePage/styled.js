@@ -63,17 +63,44 @@ export const HomeMain = styled.main`
         color: var(--blue);
       }
     }
+		.margin-top{
+			margin-top: 2rem;
+		}
     .wrapper {
-      margin-top: 2rem;
-      margin-bottom: 20rem;
-      height: 16rem;
-      width: 16rem;
+      margin: 2rem 0;
+      height: 18rem;
+      width: 14rem;
       border-radius: 0.5rem;
       background-color: var(--light-gray);
-      img {
-        width: 7.5rem;
-				border-radius: 0.5rem;
+      > img {
+        width: 9rem;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
       }
+      h2 {
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+      h1 {
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+      span {
+        color: var(--blue);
+      }
+			div {
+				display: flex;
+				align-items: center;
+				img {
+					height: 1rem;
+					margin-right: 0.5rem;
+				}
+				a {
+					font-size: 0.75rem;
+					text-decoration: none;
+					color: var(--dark-gray);
+				}
+			}
     }
   }
 `;
