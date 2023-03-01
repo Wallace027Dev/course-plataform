@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export default function MainPage() {
   return (
     <Main className="center">
-      <div>
+      <div className="mainBanner">
         <img src={MainBanner} alt="Main Page Photo" />
       </div>
       <div className="center">
