@@ -58,7 +58,7 @@ export const Main = styled.div`
   }
 	@media screen and (min-width: 1440px) {
     margin-top: 10rem;
-    div {
+    .mainBanner {
      img {
       width: 40rem;
       }
