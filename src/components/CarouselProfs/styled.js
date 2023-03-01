@@ -72,4 +72,9 @@ export const Carousels = styled.div`
       }
     }
   }
+  @media screen and (min-width: 768px) {
+    .car {
+      max-width: 36rem;
+    }
+  }
 `;
