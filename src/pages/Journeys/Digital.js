@@ -22,16 +22,14 @@ export default function Back() {
   }, []);
 
   return (
-    <Course>
+    <Course className="center">
       <nav className="navigator">
         <div className="nav-bar">
           <h1>Digital Technologies</h1>
           <img src={logoJourney} alt="Digital Technologies logo" />{" "}
         </div>
-        <input type="text" placeholder="Pesquise sua aula" />
       </nav>
       <main>
-        <h2>Escolha sua Jornada</h2>
         <div className="center">
           {/* Cursos aqui */}
           {courses.map((item) => {

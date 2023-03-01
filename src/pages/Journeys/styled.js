@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Course = styled.div`
   margin: 2.5rem auto;
-  width: 18rem;
   h1,
   h2 {
     color: var(--dark-gray);
@@ -27,19 +26,6 @@ export const Course = styled.div`
       justify-content: space-between;
       img {
         height: 2rem;
-      }
-    }
-    input {
-      width: 12.5rem;
-      height: 2.2rem;
-      border-radius: 0.5rem;
-      padding-left: 1rem;
-      margin: 1.2rem 0;
-      background-color: var(--blue);
-      color: white;
-      ::placeholder {
-        color: white;
-        font-size: 0.9rem;
       }
     }
     img {
@@ -87,5 +73,25 @@ export const Course = styled.div`
     align-items: flex-start;
     line-height: 0.9rem;
     width: 12rem;
+  }
+  @media screen and (min-width: 768px) {
+    width: 80%;
+    .navigator {
+      width: 32rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 2rem;
+      grid-row-gap: 2rem;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .navigator {
+      width: 48rem;
+    }
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 `;
