@@ -59,7 +59,7 @@ export const Main = styled.div`
 	@media screen and (min-width: 1440px) {
     margin-top: 10rem;
     img {
-    width: 80rem;
+    width: 40rem;
     }
   }
 `;
