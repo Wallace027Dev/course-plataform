@@ -1,4 +1,4 @@
-<h1  align="center">MY PORTIFOLIO - LANDING PAGE</h1>
+<h1  align="center">Staart Plataform</h1>
 
 <h4 align="center">📌 Finished</h4>
 
@@ -11,7 +11,7 @@
 
 <h2>🚀 Purpose:</h2>
 
-<p>A ideia era fazer uma plataforma parecida com a Staart, em funcionalidades, utilizando a API deles, e criando lista de jornadas, cursos e aulas. Inclusive, no meio do projeto utilizei a axios pela primeira vez, e é incrível sua facilidade de uso.</p>
+<p>The idea was to make a platform similar to Staart, in functionality, using their API, and creating a list of journeys, courses and classes. In fact, in the middle of the project I used axios for the first time, and its ease of use is incredible.</p>
 
 <h2>🔧 Instalation</h2>
 
