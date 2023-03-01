@@ -22,8 +22,8 @@ export const HomeMain = styled.main`
   .info-staart {
     margin-bottom: 2rem;
     text-align: center;
-    div {
-      width: 16rem;
+    .info-main {
+      width: 80%;
     }
     h2 {
       color: var(dark-gray);
@@ -37,18 +37,24 @@ export const HomeMain = styled.main`
       color: var(--gray);
       font-weight: 400;
     }
-    .container {
-      div {
-        display: flex;
-        justify-content: space-between;
+    .info {
+      margin: 2rem auto;
+      gap: 1rem;
+      .container {
         background-color: var(--light-gray);
-        margin-top: 1rem;
-        padding: 1rem 2rem;
+        border: var(--light-gray) solid 1rem;
         border-radius: 0.5rem;
-        p {
-          width: 75%;
-          text-align: left;
-          color: var(--dark-gray);
+        width: 16rem;
+        height: 2rem;
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          p {
+            margin-left: 1rem;
+            text-align: left;
+            color: var(--dark-gray);
+          }
         }
       }
     }
@@ -63,9 +69,9 @@ export const HomeMain = styled.main`
         color: var(--blue);
       }
     }
-		.margin-top{
-			margin-top: 2rem;
-		}
+    .margin-top {
+      margin-top: 2rem;
+    }
     .wrapper {
       margin: 2rem 0;
       height: 18rem;
@@ -88,19 +94,35 @@ export const HomeMain = styled.main`
       span {
         color: var(--blue);
       }
-			div {
-				display: flex;
-				align-items: center;
-				img {
-					height: 1rem;
-					margin-right: 0.5rem;
-				}
-				a {
-					font-size: 0.75rem;
-					text-decoration: none;
-					color: var(--dark-gray);
-				}
-			}
+      div {
+        display: flex;
+        align-items: center;
+        img {
+          height: 1rem;
+          margin-right: 0.5rem;
+        }
+        a {
+          font-size: 0.75rem;
+          text-decoration: none;
+          color: var(--dark-gray);
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .info {
+      flex-direction: row;
+      .container {
+        width: 16rem;
+        height: 2rem;
+        div {
+          p {
+            margin-left: 1rem;
+            text-align: left;
+            color: var(--dark-gray);
+          }
+        }
+      }
     }
   }
 `;

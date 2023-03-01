@@ -73,9 +73,17 @@ export const Carousels = styled.div`
       }
     }
   }
-	@media screen and (min-width: 768px) {
-		.car {
-		max-width: 36rem;
-	}
-}
+  @media screen and (min-width: 768px) {
+    .car {
+      max-width: 36rem;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    .car {
+      max-width: 72rem;
+    }
+		.btns {
+			display: none;
+		}
+  }
 `;

@@ -16,7 +16,7 @@ export default function Home(props) {
       </div>
 
       <section className="info-staart center">
-        <div>
+        <div className="info-main">
           <h2>
             Staart é uma plataforma inovadora de <span>educação</span> em{" "}
             <span>tecnologia</span>
@@ -27,18 +27,24 @@ export default function Home(props) {
             internet.
           </h3>
         </div>
-        <div className="container center">
-          <div>
-            <img src={bandeira} alt="Bandeira" />
-            <p>Ingressar ou crescer no mercado de tecnologia</p>
+        <div className="info center">
+          <div className="container">
+            <div>
+              <img src={bandeira} alt="Bandeira" />
+              <p>Ingressar ou crescer no mercado de tecnologia</p>
+            </div>
           </div>
-          <div>
-            <img src={menu} alt="Bandeira" />
-            <p>Aprimorar processos e aumentar a produtividade</p>
+          <div className="container">
+            <div>
+              <img src={menu} alt="Bandeira" />
+              <p>Aprimorar processos e aumentar a produtividade</p>
+            </div>
           </div>
-          <div>
-            <img src={money} alt="Bandeira" />
-            <p>Preparar-se para os melhores empregos e remunerações</p>
+          <div className="container">
+            <div>
+              <img src={money} alt="Bandeira" />
+              <p>Preparar-se para os melhores empregos e remunerações</p>
+            </div>
           </div>
         </div>
       </section>
