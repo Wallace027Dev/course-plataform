@@ -60,7 +60,7 @@ export const Main = styled.div`
     margin-top: 10rem;
     .mainBanner {
      img {
-      width: 40rem;
+      width: 32rem;
       }
     }
   }
