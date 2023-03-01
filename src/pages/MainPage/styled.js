@@ -48,4 +48,8 @@ export const Main = styled.div`
     background-color: ${(props) => props.theme.colors.secondary};
     color: ${(props) => props.theme.colors.bgColor};
   }
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 `;
