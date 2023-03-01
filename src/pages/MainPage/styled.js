@@ -49,7 +49,14 @@ export const Main = styled.div`
     color: ${(props) => props.theme.colors.bgColor};
   }
   @media screen and (min-width: 768px) {
+		margin-top: 5rem;
     flex-direction: row;
     justify-content: space-around;
+  }
+	@media screen and (min-width: 1024px) {
+    margin-top: 7.5rem;
+  }
+	@media screen and (min-width: 1440px) {
+    margin-top: 10rem;
   }
 `;

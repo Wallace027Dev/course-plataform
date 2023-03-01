@@ -69,4 +69,10 @@ export const Account = styled.div`
       margin: 0 auto;
     }
   }
+	@media screen and (min-width: 768px) {
+    margin-top: 5rem;
+  }
+	@media screen and (min-width: 1024px) {
+    margin-top: 10rem;
+  }
 `;
