@@ -1,6 +1,7 @@
-import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import React from "react";
 import styled from "styled-components";
+import perfil from "../../images/perfil.svg";
 
 function Navigation() {
   const location = useLocation();
@@ -19,7 +20,7 @@ function Navigation() {
     <NavStyled className="link-account">
       {showAccountLink && (
         <Link className="account" to="/account-info">
-          MINHA CONTA
+          <img src={perfil} alt="Foto de Perfil" />
         </Link>
       )}
     </NavStyled>

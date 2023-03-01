@@ -6,10 +6,11 @@ import menu from "../../images/menu.svg";
 import money from "../../images/money.svg";
 import linkImg from "../../images/linkImg.svg";
 import wallace from "../../images/wallace.jpg";
+import Footer from "../../components/Footer/Footer";
 
 export default function Home(props) {
   return (
-    <HomeMain className="center">
+    <HomeMain id="head" className="center">
       <div>
         <h2>Explore</h2>
       </div>
@@ -60,16 +61,18 @@ export default function Home(props) {
           <div className="wrapper center">
             <img src={wallace} alt="Foto wallace" />
             <h2>Frontend Developer</h2>
-              <h1>
-                <span>Wallace</span> Vieira
-              </h1>
+            <h1>
+              <span>Wallace</span> Vieira
+            </h1>
             <div>
-							<img src={linkImg} alt="Icone de link" />
+              <img src={linkImg} alt="Icone de link" />
               <a href="http://wallace027dev.vercel.app/">Conheça meu trampo</a>
             </div>
           </div>
         </div>
       </section>
+
+      <Footer />
     </HomeMain>
   );
 }
