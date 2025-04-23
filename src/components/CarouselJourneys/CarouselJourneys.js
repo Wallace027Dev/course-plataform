@@ -1,34 +1,31 @@
 import { useEffect, useState, useRef } from "react";
 import { Carousels } from "./styled";
+import { Link } from "react-router-dom";
 import seta from "../../images/seta.svg";
 import errorVideos from "../../images/errorVideos.svg";
 import loader from "../../images/loader-primary.svg";
-import { Link } from "react-router-dom";
+import coursesData from "../../mocks/courses.json";
 
 export default function CarouselJourneys() {
-  const [data, setData] = useState([]);
-  const [hasError, setHasError] = useState(false);
   const carousel = useRef(null);
   const [loading, setLoading] = useState(true);
+  const [journeys, setJourneys] = useState([]);
 
   useEffect(() => {
-    fetch("https://frontend-project.staart.com/journeys")
-      .then(async (response) => {
-        const body = await response.json();
+    try {
+      const allJourneys = coursesData.flatMap((course) =>
+        course.journeys.map((journey) => ({
+          ...journey,
+          courseId: course.id,
+        }))
+      );
 
-        setData(body);
-
-        if (!response.ok) {
-          hasError(true);
-          return;
-        }
-
-        setLoading(false);
-      })
-
-      .catch(() => {
-        setHasError(true);
-      });
+      setJourneys(allJourneys);
+      setLoading(false);
+    } catch (error) {
+      console.error("Erro ao carregar jornadas:", error);
+      setLoading(false);
+    }
   }, []);
 
   const handleLeftClick = (e) => {
@@ -50,38 +47,9 @@ export default function CarouselJourneys() {
         className="spin"
       />
     );
-  } else if (!loading) {
-    return (
-      <Carousels>
-        <div className="car" ref={carousel}>
-          {data.map((item) => {
-            const { coursesID, pathID, medias, title, description } = item;
-            return (
-              <div className="item" key={coursesID}>
-                <Link to={`${pathID}`}>
-                  <div className="image">
-                    <img src={medias.thumb} alt="foto" />
-                  </div>
-                  <div className="info">
-                    <span className="title">{title}</span>
-                    <span className="description">{description}</span>
-                  </div>
-                </Link>
-              </div>
-            );
-          })}
-        </div>
-        <div className="btns">
-          <button onClick={handleLeftClick}>
-            <img src={seta} alt="Seta para esquerda" />
-          </button>
-          <button onClick={handleRightClick}>
-            <img src={seta} alt="Seta para direita" />
-          </button>
-        </div>
-      </Carousels>
-    );
-  } else if (hasError) {
+  }
+
+  if (!journeys.length) {
     return (
       <div>
         <img src={errorVideos} alt="Imagem de erro" />
@@ -94,4 +62,35 @@ export default function CarouselJourneys() {
       </div>
     );
   }
+
+  return (
+    <Carousels>
+      <div className="car" ref={carousel}>
+        {journeys.map((journey) => {
+          const { id, medias, title, description } = journey;
+          return (
+            <div className="item" key={id}>
+              <Link to={`/home/${id}`}>
+                <div className="image">
+                  <img src={medias.thumb} alt={`Thumbnail de ${title}`} />
+                </div>
+                <div className="info">
+                  <span className="title">{title}</span>
+                  <span className="description">{description}</span>
+                </div>
+              </Link>
+            </div>
+          );
+        })}
+      </div>
+      <div className="btns">
+        <button onClick={handleLeftClick}>
+          <img src={seta} alt="Seta para esquerda" />
+        </button>
+        <button onClick={handleRightClick}>
+          <img src={seta} alt="Seta para direita" />
+        </button>
+      </div>
+    </Carousels>
+  );
 }
