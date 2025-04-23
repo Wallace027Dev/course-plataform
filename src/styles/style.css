@@ -56,3 +56,7 @@ body {
   -webkit-animation: spin 1s infinite linear;
   -moz-animation: spin 1s infinite linear;
 }
+
+ul {
+  list-style-type: none;
+}

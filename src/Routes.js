@@ -21,7 +21,7 @@ export default function AppRoutes() {
       <Route path="/account-info" element={<AccountPage />} />
       <Route path="/verified" element={<Verified />} />
       <Route path="/" element={<Home />} />
-      <Route path="/home/:journeyId" element={<JourneyPage />} />
+      <Route path="/:title/:id" element={<JourneyPage />} />
 
     </Routes>
   );

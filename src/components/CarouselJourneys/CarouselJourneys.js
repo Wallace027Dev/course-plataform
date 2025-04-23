@@ -1,13 +1,13 @@
-import { useEffect, useState, useRef } from "react";
-import { Carousels } from "./styled";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/splide/dist/css/splide.min.css";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import seta from "../../images/seta.svg";
 import errorVideos from "../../images/errorVideos.svg";
 import loader from "../../images/loader-primary.svg";
 import coursesData from "../../mocks/courses.json";
+import { Carousels } from "./styled";
 
 export default function CarouselJourneys() {
-  const carousel = useRef(null);
   const [loading, setLoading] = useState(true);
   const [journeys, setJourneys] = useState([]);
 
@@ -16,7 +16,7 @@ export default function CarouselJourneys() {
       const allJourneys = coursesData.flatMap((course) =>
         course.journeys.map((journey) => ({
           ...journey,
-          courseId: course.id,
+          courseId: course.id
         }))
       );
 
@@ -27,16 +27,6 @@ export default function CarouselJourneys() {
       setLoading(false);
     }
   }, []);
-
-  const handleLeftClick = (e) => {
-    e.preventDefault();
-    carousel.current.scrollLeft -= carousel.current.offsetWidth;
-  };
-
-  const handleRightClick = (e) => {
-    e.preventDefault();
-    carousel.current.scrollLeft += carousel.current.offsetWidth;
-  };
 
   if (loading) {
     return (
@@ -65,32 +55,40 @@ export default function CarouselJourneys() {
 
   return (
     <Carousels>
-      <div className="car" ref={carousel}>
+      <Splide
+        options={{
+          type: "loop",
+          perPage: 3,
+          gap: "1rem",
+          pagination: false,
+          arrows: true,
+          autoplay: true,
+          interval: 3000,
+          pauseOnHover: true,
+          resetProgress: false,
+          breakpoints: {
+            1024: { perPage: 2 },
+            768: { perPage: 1 }
+          }
+        }}
+        aria-label="Jornadas"
+      >
         {journeys.map((journey) => {
-          const { id, medias, title, description } = journey;
+          const { id, medias, title } = journey;
           return (
-            <div className="item" key={id}>
-              <Link to={`/home/${id}`}>
+            <SplideSlide key={id}>
+              <Link to={`/${encodeURIComponent(title)}/${id}`}>
                 <div className="image">
                   <img src={medias.thumb} alt={`Thumbnail de ${title}`} />
                 </div>
                 <div className="info">
                   <span className="title">{title}</span>
-                  <span className="description">{description}</span>
                 </div>
               </Link>
-            </div>
+            </SplideSlide>
           );
         })}
-      </div>
-      <div className="btns">
-        <button onClick={handleLeftClick}>
-          <img src={seta} alt="Seta para esquerda" />
-        </button>
-        <button onClick={handleRightClick}>
-          <img src={seta} alt="Seta para direita" />
-        </button>
-      </div>
+      </Splide>
     </Carousels>
   );
 }

@@ -26,25 +26,14 @@ export const Course = styled.div`
       justify-content: space-between;
       img {
         height: 2rem;
+        width: auto;
       }
     }
     img {
       height: 3rem;
     }
   }
-  .wrapper-course {
-    width: 18rem;
-    height: 6.5rem;
-    border-radius: 1rem;
-    background-color: var(--light-gray);
-    margin-top: 2rem;
-    padding: 0 0.5rem;
-    flex-direction: row;
-    justify-content: space-around;
-    > div {
-      margin: 0 0.5rem;
-    }
-    img {
+  img {
       height: 4.5rem;
       width: 7.5rem;
       border-radius: 0.25rem;
@@ -66,6 +55,18 @@ export const Course = styled.div`
       background-color: var(--dark-gray);
       border-radius: 1rem;
       color: var(--bg-color);
+    }
+  .wrapper-course {
+    width: 18rem;
+    height: 6.5rem;
+    border-radius: 1rem;
+    background-color: var(--light-gray);
+    margin-top: 2rem;
+    padding: 0 0.5rem;
+    flex-direction: row;
+    justify-content: space-around;
+    > div {
+      margin: 0 0.5rem;
     }
   }
   .wrapper-course-info {
