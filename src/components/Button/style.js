@@ -5,10 +5,10 @@ export const Container = styled.button`
   padding: 1rem 1.2rem;
   background: ${({variant}) => variant === "filled" ? "var(--primary)" : "none"};
   border-radius: 0.25rem;
-  transition: background 2s ease-in transform 2s ease-in;
+  transition: background 0.2s ease-in transform 0.2s ease-in;
 
   &:hover {
-    background: var(--secondary);
+    background: ${({theme}) => theme.colors.secondary};
     transform: translateY(-2px);
     cursor: pointer;
   }

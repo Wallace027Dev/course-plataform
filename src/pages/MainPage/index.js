@@ -1,5 +1,6 @@
 import { Header, Main } from "./style";
-import logo from "../../images/LogoStaart.svg"
+import logo from "../../images/LogoStaart.svg";
+import AnchorButton from "../../components/AnchorButton";
 
 export default function MainPage() {
   return (
@@ -11,20 +12,28 @@ export default function MainPage() {
 
         <nav>
           <ul>
-            <li><a href="#journeys">Jornada</a></li>
-            <li><a href="#metodologies">Metodologia</a></li>
-            <li><a href="#instructors">Instrutores</a></li>
+            <li>
+              <AnchorButton path="#journeys">Jornada</AnchorButton>
+            </li>
+            <li>
+              <AnchorButton path="#metodologies">Metodologia</AnchorButton>
+            </li>
+            <li>
+              <AnchorButton path="#instructors">Instrutores</AnchorButton>
+            </li>
           </ul>
         </nav>
 
-        <div>
-          <a href="/login">Já sou aluno</a> {/* Botão vazado */}
-          <a href="/welcome">Quero aprender</a> {/* Botão preenchido */}
+        <div className="page-buttons">
+          <AnchorButton path="/login">Já sou aluno</AnchorButton>
+          {/* Botão vazado */}
+          <AnchorButton path="/welcome" variant="filled">
+            Quero aprender
+          </AnchorButton>
+          {/* Botão preenchido */}
         </div>
       </Header>
-      <Main>
-        
-      </Main>
+      <Main></Main>
     </>
-  )
+  );
 }
