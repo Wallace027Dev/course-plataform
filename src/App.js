@@ -23,7 +23,7 @@ function App() {
     <>
       <AuthProvider>
         <BrowserRouter>
-          <NavBar>
+          {/* <NavBar>
             <div>
               <a href="https://app.staart.com/">
                 {<img src={iconStaart} alt="Logo Staart" />}
@@ -42,7 +42,7 @@ function App() {
                 onColor="#858597"
               />
             </div>
-          </NavBar>
+          </NavBar> */}
           <ThemeProvider theme={theme}>
             <AppRoutes />
             <MyComponent />

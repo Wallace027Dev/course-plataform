@@ -1,14 +1,14 @@
-import { Main } from "./styled";
+import { Container } from "./styled";
 import { Btn } from "../../styles/Btn";
 import MainBanner from "../../images/MainPage.svg";
 import LogoStaart from "../../images/LogoStaart.svg";
 import { Link } from "react-router-dom";
 
-export default function MainPage() {
+export default function Welcome() {
   return (
-    <Main className="center">
+    <Container className="center">
       <div className="mainBanner">
-        <img src={MainBanner} alt="Main Page Photo" />
+        <img src={MainBanner} alt="Main Page" />
       </div>
       <div className="center">
         <section>
@@ -40,6 +40,6 @@ export default function MainPage() {
           </Link>
         </div>
       </div>
-    </Main>
+    </Container>
   );
 }

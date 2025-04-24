@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Main = styled.div`
+export const Container = styled.div`
   flex-direction: column;
   p {
     color: var(--gray);
