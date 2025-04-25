@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.a`
+  display: inline-block;
   font-size: clamp(0.8rem, 2vh, 1rem);
   padding: 1rem 1.2rem;
   background: transparent;
@@ -9,7 +10,7 @@ export const Container = styled.a`
     variant === "filled" ? theme.colors.primary : "transparent"};
   border-radius: 0.25rem;
   transition: background 0.2s ease-in;
-  color: white;
+  color: ${({ theme }) => theme.colors.tertiary};
   font-weight: 400;
 
   &:hover {

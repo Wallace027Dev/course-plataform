@@ -1,4 +1,4 @@
-import { Header, Main } from "./style";
+import { Greetings, Header, Main, Subtitle } from "./style";
 import logo from "../../images/LogoStaart.svg";
 import AnchorButton from "../../components/AnchorButton";
 
@@ -26,14 +26,28 @@ export default function MainPage() {
 
         <div className="page-buttons">
           <AnchorButton path="/login">Já sou aluno</AnchorButton>
-          {/* Botão vazado */}
           <AnchorButton path="/welcome" variant="filled">
             Quero aprender
           </AnchorButton>
-          {/* Botão preenchido */}
         </div>
       </Header>
-      <Main></Main>
+
+      <Main>
+        <Greetings>
+          <small>Tecnologia para todos</small>
+          <Subtitle>Dê um Staart na sua carreira em tecnologia</Subtitle>
+          <p>
+            Aqui na Staart nós capacitamos pessoas a construirem soluções
+            através de tecnologia. Seguindo nossas jornadas você irá do zero até
+            a construção de aplicações completas com tecnologias de mercado.
+          </p>
+          <AnchorButton variant="filled" path="#register">Quero saber como</AnchorButton>
+        </Greetings>
+
+        <div>
+          {/* Imagem animada das rotas possíveis para aprender a programar */}
+        </div>
+      </Main>
     </>
   );
 }

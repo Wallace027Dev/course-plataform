@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
   --light-gray: ${(props) => props.theme.colors.tertiary};
   --dark-gray: ${(props) => props.theme.colors.textColor};
   --bg-color: ${(props) => props.theme.colors.bgColor};
+  --gradient: ${(props) => props.theme.colors.gradient};
 }
 `;
 
