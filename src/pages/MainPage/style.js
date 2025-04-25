@@ -4,17 +4,18 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: calc(100% - 10vw);
-  padding: 2vh 5vw;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2vh auto;
 
   nav ul {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
   }
 
   .page-buttons {
     display: flex;
-    gap: 0.2rem;
+    gap: 0.5rem;
     justify-content: center;
   }
 `;
