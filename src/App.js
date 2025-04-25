@@ -14,7 +14,7 @@ import "./styles/style.css";
 import Navigation from "./components/NavigationAccount/NavigationAccount";
 
 function App() {
-  const [theme, setTheme] = useState(dark);
+  const [theme, setTheme] = useState(light);
 
   const onChangeTheme = () => {
     setTheme(theme.name === "dark" ? light : dark);

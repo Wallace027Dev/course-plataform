@@ -9,9 +9,10 @@ export const Container = styled.a`
   background: ${({ variant, theme }) =>
     variant === "filled" ? theme.colors.primary : "transparent"};
   border-radius: 0.25rem;
-  transition: background 0.2s ease-in;
-  color: ${({ theme }) => theme.colors.tertiary};
-  font-weight: 400;
+  transition: background 0.3s ease-in, color 0.3s ease-in;
+  color: ${({ variant, theme }) =>
+    variant === "filled" ? theme.colors.bgColor : theme.colors.primary};
+  font-weight: 500;
 
   &:hover {
     background: ${({ theme }) => theme.colors.primary};
@@ -19,6 +20,8 @@ export const Container = styled.a`
       variant === "filled" ? "transparent" : theme.colors.primary};
     border-color: ${({ variant, theme }) =>
       variant === "filled" ? theme.colors.primary : "transparent"};
+    color: ${({ variant, theme }) =>
+    variant === "filled" ? theme.colors.primary : theme.colors.bgColor};
     cursor: pointer;
   }
 `;

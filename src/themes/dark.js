@@ -1,13 +1,14 @@
 const darkTheme = {
   name: "dark",
   colors: {
-    primary: "#6A45D1",
-    secondary: "#aB8cff",
-    tertiary: "#E5E5FC",
+    primary: "#f2c744",
+    secondary: "#ffe62e",
+    tertiary: "#FFF3B0",
 
-    textColor: "#FFF",
-    bgColor: "#1F1F39",
-    gradient: `linear-gradient(125deg, #6a45d1 0%, #E5E5FC 100%)`
+    textColor: "#f3f3f3",
+    bgColor: "#262626",
+
+    gradient: `linear-gradient(125deg,#f2c744 0%, #FFF3B0 70%, #ffe62e 80%, #FFF3B0 100%)`
   }
 };
 
