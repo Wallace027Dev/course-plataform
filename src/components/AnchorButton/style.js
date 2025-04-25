@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.a`
   display: inline-block;
-  font-size: clamp(0.8rem, 2vh, 1rem);
+  font-size: clamp(0.8rem, 1.2vw, 1.2rem);
   padding: 1rem 1.2rem;
   background: transparent;
   border: 2px solid transparent;
@@ -21,7 +21,11 @@ export const Container = styled.a`
     border-color: ${({ variant, theme }) =>
       variant === "filled" ? theme.colors.primary : "transparent"};
     color: ${({ variant, theme }) =>
-    variant === "filled" ? theme.colors.primary : theme.colors.bgColor};
+      variant === "filled" ? theme.colors.primary : theme.colors.bgColor};
     cursor: pointer;
+  }
+
+  @media (max-width: 64rem) {
+    padding: 0.75rem 1rem;
   }
 `;

@@ -1,6 +1,7 @@
-import { Greetings, Header, Main, Subtitle } from "./style";
-import logo from "../../images/LogoStaart.svg";
+import { Greetings, Header, Main, RoadmapImage, Subtitle } from "./style";
 import AnchorButton from "../../components/AnchorButton";
+import logo from "../../images/LogoStaart.svg";
+import roadmap from "../../assets/images/main-roadmap.png";
 
 export default function MainPage() {
   return (
@@ -41,12 +42,15 @@ export default function MainPage() {
             através de tecnologia. Seguindo nossas jornadas você irá do zero até
             a construção de aplicações completas com tecnologias de mercado.
           </p>
-          <AnchorButton variant="filled" path="#register">Quero saber como</AnchorButton>
+          <AnchorButton variant="filled" path="#register">
+            Quero saber como
+          </AnchorButton>
         </Greetings>
 
-        <div>
+        <RoadmapImage>
           {/* Imagem animada das rotas possíveis para aprender a programar */}
-        </div>
+          <img src={roadmap} alt="Roteiro de jornada dos cursos" />
+        </RoadmapImage>
       </Main>
     </>
   );
