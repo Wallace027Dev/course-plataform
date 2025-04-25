@@ -95,21 +95,21 @@
           },
           {
             "id": "14",
-            "title": "Fetch API",
-            "description": "Utilizando a Fetch API para comunicação com APIs externas.",
-            "objective": "Realizar requisições HTTP e consumir dados externos com JavaScript."
+            "title": "Assincronismo em JavaScript",
+            "description": "Introdução ao funcionamento assíncrono do JavaScript e uso de funções como setTimeout, setInterval, Promises e async/await.",
+            "objective": "Entender como o JavaScript executa tarefas assíncronas e aplicar Promises e async/await no controle de fluxos não-bloqueantes."
           },
           {
             "id": "15",
-            "title": "Manipulação de JSON",
-            "description": "Trabalhando com dados no formato JSON (JavaScript Object Notation).",
-            "objective": "Converter e manipular dados JSON com `JSON.stringify()` e `JSON.parse()`."
+            "title": "Trabalhando com JSON e APIs",
+            "description": "Aprenda a consumir dados de APIs externas usando fetch e manipular JSON em aplicações JavaScript.",
+            "objective": "Fazer requisições HTTP com fetch, converter dados com JSON.parse() e JSON.stringify(), e trabalhar com APIs REST."
           },
           {
             "id": "16",
             "title": "Manipulação de DOM",
-            "description": "Entendendo e alterando a estrutura de uma página via JavaScript.",
-            "objective": "Interagir com elementos HTML usando seletores, eventos e modificações via JavaScript."
+            "description": "Manipule elementos HTML via JavaScript usando seletores, eventos e propriedades do DOM.",
+            "objective": "Selecionar e modificar elementos HTML, escutar eventos e atualizar dinamicamente o conteúdo da página."
           }
         ]
       },

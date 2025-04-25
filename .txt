@@ -1,0 +1,20 @@
+Início
+    Declarar n, soma como Inteiro
+    soma <- 0
+
+    Escrever "Digite um número final: "
+    Ler n
+
+    Se n < 1 então
+        Escrever "Digite um número maior ou igual a 1."
+        Sair
+    Fim Se
+
+    Escrever "Sequência:"
+    Para i de 1 até n faça
+        Escrever i
+        soma <- soma + i
+    Fim Para
+
+    Escrever "Soma total: ", soma
+Fim
