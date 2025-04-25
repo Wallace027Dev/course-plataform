@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Carousels = styled.div`
   width: 100%;
-  max-width: 1200px;
+  max-width: 88rem;
   margin-top: 0.5rem;
 
   img {

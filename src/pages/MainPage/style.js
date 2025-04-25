@@ -5,7 +5,7 @@ export const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
+  max-width: 88rem;
   margin: 2vh auto;
 
   nav ul {
